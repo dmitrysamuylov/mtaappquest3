@@ -21,9 +21,17 @@
     [guide setNDDPath:[[NSBundle mainBundle] pathForResource:@"gcs-zones" ofType:@"ndd"]];
     guide.directionsDelegate = self;
     guide.positioningDelegate = self;
-    [guide startUpdates];
+    //[guide startUpdates];
     
-    [self startTimer];
+    //[self startTimer];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    UITabBarController *main = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarScene"];
+    [self showDetailViewController:main sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {

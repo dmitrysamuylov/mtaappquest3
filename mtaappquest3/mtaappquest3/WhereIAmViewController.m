@@ -9,9 +9,14 @@
 #import "WhereIAmViewController.h"
 #import "Location.h"
 #import "Sign.h"
+#import "CurrentSignTableViewCell.h"
+#import "LocationSignTableViewCell.h"
 
-@interface WhereIAmViewController ()
-
+@interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate>
+{
+	Location *_currentLocation;
+	IBOutlet UITableView *_SignTableView;
+}
 @end
 
 @implementation WhereIAmViewController
@@ -19,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+	
     guide = [IGGuideManager sharedManager];
     
     // ---------------
@@ -40,7 +45,9 @@
         [self startHeadingReading];
     }
      */
-    
+	
+	_currentLocation = [self getCurrentLocation];
+	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +112,71 @@
     
     NSLog(@"%@",error.description);
 }
+
+
+#pragma UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 8;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (indexPath.row < 2)
+	{
+		CurrentSignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CurrentSignIdentifier"];
+		
+		if (indexPath.row == 0)
+		{
+			cell.titleLabel.text = @"You are facing:";
+			cell.descriptionLabel.text = @"You are facing information would go here!";
+		}
+		else
+		{
+			cell.titleLabel.text = indexPath.row == 0 ? @"You are facing:" : @"You are at the:";
+			cell.descriptionLabel.text = _currentLocation.name;
+		}
+		
+		return cell;
+
+	}
+	else if (indexPath.row < 6)
+	{
+		LocationSignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationSignCellIdentifier"];
+		
+		NSString *signKey = _currentLocation.signs.allKeys[indexPath.row - 2];
+		NSString *signDescription = _currentLocation.signs[signKey];
+		cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@", signKey, signDescription];
+		
+		return cell;
+	}
+	else
+	{
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NormalCellID"];
+		cell.backgroundColor = [UIColor clearColor];
+		
+		if (indexPath.row == 7)
+		{
+			UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(cell.frame), CGRectGetHeight(cell.frame))];
+			[button setTitle:@"Recalibrate my location" forState:UIControlStateNormal];
+			[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+			button.backgroundColor = [UIColor colorWithRed:0 green:170.0f/255 blue:239.0f/255 alpha:1];
+			[cell addSubview:button];
+		}
+
+		return cell;
+	}
+}
+
+#pragma UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (indexPath.row == 6)
+		return 40;
+	return 60;
+}
+
 
 /*
 

@@ -57,6 +57,8 @@
 		088F46531A798CCC000CAB07 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F46521A798CCC000CAB07 /* Route.m */; };
 		088F46551A798D15000CAB07 /* zones.txt in Resources */ = {isa = PBXBuildFile; fileRef = 088F46541A798D15000CAB07 /* zones.txt */; };
 		088F46571A7B1219000CAB07 /* gcs-zones.ndd in Resources */ = {isa = PBXBuildFile; fileRef = 088F46561A7B1219000CAB07 /* gcs-zones.ndd */; };
+		2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */; };
+		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
 		324548701A7D895500A7447D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486D1A7D895500A7447D /* Location.m */; };
 		324548711A7D895500A7447D /* Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486F1A7D895500A7447D /* Sign.m */; };
 /* End PBXBuildFile section */
@@ -160,6 +162,10 @@
 		088F46521A798CCC000CAB07 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		088F46541A798D15000CAB07 /* zones.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zones.txt; sourceTree = "<group>"; };
 		088F46561A7B1219000CAB07 /* gcs-zones.ndd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gcs-zones.ndd"; sourceTree = "<group>"; };
+		2374C1241A7D961C002A04D7 /* CurrentSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSignTableViewCell.h; sourceTree = "<group>"; };
+		2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSignTableViewCell.m; sourceTree = "<group>"; };
+		2374C1281A7D96B4002A04D7 /* LocationSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSignTableViewCell.h; sourceTree = "<group>"; };
+		2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSignTableViewCell.m; sourceTree = "<group>"; };
 		3245486C1A7D895500A7447D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3245486D1A7D895500A7447D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3245486E1A7D895500A7447D /* Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
@@ -273,6 +279,8 @@
 		088F45931A785DBF000CAB07 /* WhereIAm */ = {
 			isa = PBXGroup;
 			children = (
+				2374C1271A7D969D002A04D7 /* LocationSignTableViewCell */,
+				2374C11C1A7D8E9F002A04D7 /* CurrentSignTableViewCell */,
 				082767A11A69712F004BB132 /* WhereIAmViewController.h */,
 				082767A21A69712F004BB132 /* WhereIAmViewController.m */,
 			);
@@ -469,6 +477,24 @@
 			name = "GTFS files";
 			sourceTree = "<group>";
 		};
+		2374C11C1A7D8E9F002A04D7 /* CurrentSignTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2374C1241A7D961C002A04D7 /* CurrentSignTableViewCell.h */,
+				2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */,
+			);
+			name = CurrentSignTableViewCell;
+			sourceTree = "<group>";
+		};
+		2374C1271A7D969D002A04D7 /* LocationSignTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2374C1281A7D96B4002A04D7 /* LocationSignTableViewCell.h */,
+				2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */,
+			);
+			name = LocationSignTableViewCell;
+			sourceTree = "<group>";
+		};
 		3245486B1A7D895500A7447D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +626,7 @@
 				088F45F51A793CD0000CAB07 /* NSArray+InnerBand.m in Sources */,
 				082767731A696678004BB132 /* AppDelegate.m in Sources */,
 				088F45F91A793CD0000CAB07 /* NSMutableString+InnerBand.m in Sources */,
+				2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */,
 				088F45FC1A793CD0000CAB07 /* NSString+Encoding.m in Sources */,
 				088F46131A793D10000CAB07 /* CHCSVParser.m in Sources */,
 				088F46011A793CD0000CAB07 /* IBFunctions.m in Sources */,
@@ -607,6 +634,7 @@
 				088F46031A793CD0000CAB07 /* IBCoreDataStore.m in Sources */,
 				088F464D1A798CCC000CAB07 /* Trip.m in Sources */,
 				088F45A01A78802D000CAB07 /* FindTrainTableViewController.m in Sources */,
+				2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */,
 				088F45FD1A793CD0000CAB07 /* NSString+InnerBand.m in Sources */,
 				082767A31A69712F004BB132 /* WhereIAmViewController.m in Sources */,
 				088F45F81A793CD0000CAB07 /* NSMutableArray+InnerBand.m in Sources */,

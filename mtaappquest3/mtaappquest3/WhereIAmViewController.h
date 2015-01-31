@@ -10,7 +10,7 @@
 #import <IndoorGuide/IGMapViewController.h>
 #import <IndoorGuide/IGGuideManager.h>
 
-@interface WhereIAmViewController : IGMapViewController <UIAlertViewDelegate,CLLocationManagerDelegate>
+@interface WhereIAmViewController : IGMapViewController <UIAlertViewDelegate,CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     IGGuideManager* guide;
 }

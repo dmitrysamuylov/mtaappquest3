@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHCSVParser.h"
+#import "InnerBand.h"
+#import "Route.h"
+#import "Stop.h"
+#import "Zone.h"
+#import "StopTime.h"
+#import "Trip.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate, CHCSVParserDelegate>
+{
+    NSDateFormatter *myFormatter;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 

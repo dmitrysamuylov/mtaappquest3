@@ -8,18 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <IndoorGuide/IGMapViewController.h>
-#import <CoreLocation/CoreLocation.h>
 #import <IndoorGuide/IGGuideManager.h>
 
-@interface WhereIAmViewController : IGMapViewController <UIAlertViewDelegate>
+@interface WhereIAmViewController : IGMapViewController <UIAlertViewDelegate,CLLocationManagerDelegate>
 {
     IGGuideManager* guide;
 }
 
-@property (weak, nonatomic) IBOutlet UIView *myLoadingView;
-@property (weak, nonatomic) IBOutlet UITextView *logTextView;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *currentZoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentHeadingLabel;
 
 
 @end

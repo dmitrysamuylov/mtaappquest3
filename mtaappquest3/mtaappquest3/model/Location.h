@@ -1,5 +1,5 @@
 //
-//  Zone.h
+//  Location.h
 //  mtaappquest3
 //
 //  Created by Dmitry Samuylov on 1/31/15.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Zone : NSObject
+@interface Location : NSObject
 
 @property NSString *name;
 @property NSString *descriptionPrimary;
 @property NSString *descriptionDetailed;
-@property NSMutableDictionary *signs;
+@property NSDictionary *signs;
 
 @end

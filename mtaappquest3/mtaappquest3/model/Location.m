@@ -1,13 +1,13 @@
 //
-//  Zone.h
+//  Location.h
 //  mtaappquest3
 //
 //  Created by Dmitry Samuylov on 1/31/15.
 //  Copyright (c) 2015 Diego Cruz. All rights reserved.
 //
 
-#import "Zone.h"
+#import "Location.h"
 
-@implementation Zone
+@implementation Location
 
 @end

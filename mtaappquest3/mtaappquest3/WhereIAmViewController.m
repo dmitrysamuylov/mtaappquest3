@@ -7,7 +7,7 @@
 //
 
 #import "WhereIAmViewController.h"
-#import "Zone.h"
+#import "Location.h"
 #import "Sign.h"
 
 @interface WhereIAmViewController ()
@@ -146,13 +146,17 @@
 
 #pragma mark - Private Helper Methods
 
-- (Zone*)getZone
+- (Location*)getCurrentLocation
 {
-    Zone* currentZone = [Zone new];
-    currentZone.name = @"Mezzanine 1";
-    currentZone.descriptionPrimary = @""
+    Location* currentLocation = [Location new];
+    currentLocation.name = @"Mezzanine 1";
+    currentLocation.descriptionPrimary = @"Description of everything you can see in the mezzanine";
+    currentLocation.signs = @{ @"NorthSign": @"North Trains list",
+                               @"EastSign": @"East Trains list",
+                               @"SouthSign": @"South Trains list",
+                               @"WestSign": @"West Trains list" };
     
-    return
+    return currentLocation;
 }
 
 

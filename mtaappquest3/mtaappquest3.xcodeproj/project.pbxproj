@@ -62,6 +62,7 @@
 		088F46571A7B1219000CAB07 /* gcs-zones.ndd in Resources */ = {isa = PBXBuildFile; fileRef = 088F46561A7B1219000CAB07 /* gcs-zones.ndd */; };
 		2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */; };
 		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
+		2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */; };
 		324548701A7D895500A7447D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486D1A7D895500A7447D /* Location.m */; };
 		324548711A7D895500A7447D /* Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486F1A7D895500A7447D /* Sign.m */; };
 		324548731A7D8F7C00A7447D /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 324548721A7D8F7C00A7447D /* locations.json */; };
@@ -177,6 +178,8 @@
 		2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSignTableViewCell.m; sourceTree = "<group>"; };
 		2374C1281A7D96B4002A04D7 /* LocationSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSignTableViewCell.h; sourceTree = "<group>"; };
 		2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSignTableViewCell.m; sourceTree = "<group>"; };
+		2374C12C1A7DA184002A04D7 /* RecalibrateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecalibrateTableViewCell.h; sourceTree = "<group>"; };
+		2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecalibrateTableViewCell.m; sourceTree = "<group>"; };
 		3245486C1A7D895500A7447D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3245486D1A7D895500A7447D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3245486E1A7D895500A7447D /* Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
@@ -306,6 +309,7 @@
 		088F45931A785DBF000CAB07 /* WhereIAm */ = {
 			isa = PBXGroup;
 			children = (
+				2374C12B1A7DA16B002A04D7 /* RecalibrateTableViewCell */,
 				2374C1271A7D969D002A04D7 /* LocationSignTableViewCell */,
 				2374C11C1A7D8E9F002A04D7 /* CurrentSignTableViewCell */,
 				082767A11A69712F004BB132 /* WhereIAmViewController.h */,
@@ -523,6 +527,15 @@
 			name = LocationSignTableViewCell;
 			sourceTree = "<group>";
 		};
+		2374C12B1A7DA16B002A04D7 /* RecalibrateTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2374C12C1A7DA184002A04D7 /* RecalibrateTableViewCell.h */,
+				2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */,
+			);
+			name = RecalibrateTableViewCell;
+			sourceTree = "<group>";
+		};
 		3245486B1A7D895500A7447D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +673,7 @@
 				082767731A696678004BB132 /* AppDelegate.m in Sources */,
 				088F45F91A793CD0000CAB07 /* NSMutableString+InnerBand.m in Sources */,
 				2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */,
+				2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */,
 				088F45FC1A793CD0000CAB07 /* NSString+Encoding.m in Sources */,
 				088F46131A793D10000CAB07 /* CHCSVParser.m in Sources */,
 				088F46011A793CD0000CAB07 /* IBFunctions.m in Sources */,

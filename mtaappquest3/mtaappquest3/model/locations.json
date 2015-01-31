@@ -25,8 +25,8 @@
                 }
               ]
     },
-    "Mezzanine1": {
-        "name": "Mezzanine 1",
+    "Mezzanine2": {
+        "name": "Mezzanine 2",
         "descriptionPrimary": "Description of everything you can see in the mezzanine",
         "descriptionDetailed": "",
         "signs": [{
@@ -51,8 +51,8 @@
                 }
                   ]
     },
-    "Mezzanine1": {
-        "name": "Mezzanine 1",
+    "Mezzanine3": {
+        "name": "Mezzanine 3",
         "descriptionPrimary": "Description of everything you can see in the mezzanine",
         "descriptionDetailed": "",
         "signs": [{

@@ -10,6 +10,7 @@
 #import "Location.h"
 #import "Sign.h"
 #import "CurrentSignTableViewCell.h"
+#import "SignParser.h"
 #import "LocationSignTableViewCell.h"
 
 @interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -46,7 +47,8 @@
     }
      */
 	
-	_currentLocation = [self getCurrentLocation];
+//	_currentLocation = [self getCurrentLocation];
+	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:@"Mezzanine2"];
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
 
@@ -118,7 +120,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 8;
+	return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,17 +155,7 @@
 	}
 	else
 	{
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NormalCellID"];
-		cell.backgroundColor = [UIColor clearColor];
-		
-		if (indexPath.row == 7)
-		{
-			UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(cell.frame), CGRectGetHeight(cell.frame))];
-			[button setTitle:@"Recalibrate my location" forState:UIControlStateNormal];
-			[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-			button.backgroundColor = [UIColor colorWithRed:0 green:170.0f/255 blue:239.0f/255 alpha:1];
-			[cell addSubview:button];
-		}
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecalibrateCellIdentifier"];
 
 		return cell;
 	}

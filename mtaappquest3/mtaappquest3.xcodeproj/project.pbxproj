@@ -19,7 +19,10 @@
 		0827679B1A6966D2004BB132 /* IndoorGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0827679A1A6966D2004BB132 /* IndoorGuide.framework */; };
 		0827679D1A6966E8004BB132 /* grand-central-1.ndd in Resources */ = {isa = PBXBuildFile; fileRef = 0827679C1A6966E8004BB132 /* grand-central-1.ndd */; };
 		082767A31A69712F004BB132 /* WhereIAmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082767A21A69712F004BB132 /* WhereIAmViewController.m */; };
-		088F45991A786E6F000CAB07 /* MyIndoorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45981A786E6F000CAB07 /* MyIndoorManager.m */; };
+		0846A1DC1A7D8BF50037F4BC /* SignParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846A1DB1A7D8BF50037F4BC /* SignParser.m */; };
+		0846A1E51A7D8E6F0037F4BC /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846A1DF1A7D8E6F0037F4BC /* CJSONDeserializer.m */; };
+		0846A1E61A7D8E6F0037F4BC /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846A1E11A7D8E6F0037F4BC /* CJSONSerializer.m */; };
+		0846A1E71A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846A1E41A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m */; };
 		088F459D1A787263000CAB07 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F459C1A787263000CAB07 /* InitialViewController.m */; };
 		088F45A01A78802D000CAB07 /* FindTrainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F459F1A78802D000CAB07 /* FindTrainTableViewController.m */; };
 		088F45A31A7880CB000CAB07 /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45A21A7880CB000CAB07 /* TrainCell.m */; };
@@ -61,6 +64,7 @@
 		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
 		324548701A7D895500A7447D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486D1A7D895500A7447D /* Location.m */; };
 		324548711A7D895500A7447D /* Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486F1A7D895500A7447D /* Sign.m */; };
+		324548731A7D8F7C00A7447D /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 324548721A7D8F7C00A7447D /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +96,15 @@
 		0827679C1A6966E8004BB132 /* grand-central-1.ndd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "grand-central-1.ndd"; sourceTree = "<group>"; };
 		082767A11A69712F004BB132 /* WhereIAmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereIAmViewController.h; sourceTree = "<group>"; };
 		082767A21A69712F004BB132 /* WhereIAmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereIAmViewController.m; sourceTree = "<group>"; };
-		088F45971A786E6F000CAB07 /* MyIndoorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIndoorManager.h; sourceTree = "<group>"; };
-		088F45981A786E6F000CAB07 /* MyIndoorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIndoorManager.m; sourceTree = "<group>"; };
+		0846A1DA1A7D8BF50037F4BC /* SignParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignParser.h; sourceTree = "<group>"; };
+		0846A1DB1A7D8BF50037F4BC /* SignParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignParser.m; sourceTree = "<group>"; };
+		0846A1DE1A7D8E6F0037F4BC /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		0846A1DF1A7D8E6F0037F4BC /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		0846A1E01A7D8E6F0037F4BC /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		0846A1E11A7D8E6F0037F4BC /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		0846A1E21A7D8E6F0037F4BC /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		0846A1E31A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		0846A1E41A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
 		088F459B1A787263000CAB07 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		088F459C1A787263000CAB07 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		088F459E1A78802D000CAB07 /* FindTrainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTrainTableViewController.h; sourceTree = "<group>"; };
@@ -170,6 +181,7 @@
 		3245486D1A7D895500A7447D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3245486E1A7D895500A7447D /* Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
 		3245486F1A7D895500A7447D /* Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sign.m; sourceTree = "<group>"; };
+		324548721A7D8F7C00A7447D /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +288,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0846A1DD1A7D8E6F0037F4BC /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				0846A1DE1A7D8E6F0037F4BC /* CJSONDeserializer.h */,
+				0846A1DF1A7D8E6F0037F4BC /* CJSONDeserializer.m */,
+				0846A1E01A7D8E6F0037F4BC /* CJSONSerializer.h */,
+				0846A1E11A7D8E6F0037F4BC /* CJSONSerializer.m */,
+				0846A1E21A7D8E6F0037F4BC /* JSONRepresentation.h */,
+				0846A1E31A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.h */,
+				0846A1E41A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m */,
+			);
+			name = TouchJSON;
+			path = Source;
+			sourceTree = "<group>";
+		};
 		088F45931A785DBF000CAB07 /* WhereIAm */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,10 +335,11 @@
 		088F45961A786D3F000CAB07 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				0846A1DD1A7D8E6F0037F4BC /* TouchJSON */,
 				088F46101A793D10000CAB07 /* CHCSVParser */,
 				088F45AC1A793CD0000CAB07 /* InnerBand */,
-				088F45971A786E6F000CAB07 /* MyIndoorManager.h */,
-				088F45981A786E6F000CAB07 /* MyIndoorManager.m */,
+				0846A1DA1A7D8BF50037F4BC /* SignParser.h */,
+				0846A1DB1A7D8BF50037F4BC /* SignParser.m */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -498,6 +526,7 @@
 		3245486B1A7D895500A7447D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				324548721A7D8F7C00A7447D /* locations.json */,
 				3245486C1A7D895500A7447D /* Location.h */,
 				3245486D1A7D895500A7447D /* Location.m */,
 				3245486E1A7D895500A7447D /* Sign.h */,
@@ -596,6 +625,7 @@
 				088F46551A798D15000CAB07 /* zones.txt in Resources */,
 				088F46241A797E48000CAB07 /* stops.txt in Resources */,
 				0827679D1A6966E8004BB132 /* grand-central-1.ndd in Resources */,
+				324548731A7D8F7C00A7447D /* locations.json in Resources */,
 				088F46231A797E48000CAB07 /* stop_times.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,8 +650,11 @@
 				088F46081A793CD0000CAB07 /* IBDispatchMessage.m in Sources */,
 				088F460A1A793CD0000CAB07 /* IBMessageProcessor.m in Sources */,
 				088F45A71A788116000CAB07 /* MTAModel.xcdatamodeld in Sources */,
+				0846A1E71A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m in Sources */,
+				0846A1E51A7D8E6F0037F4BC /* CJSONDeserializer.m in Sources */,
+				0846A1E61A7D8E6F0037F4BC /* CJSONSerializer.m in Sources */,
+				0846A1DC1A7D8BF50037F4BC /* SignParser.m in Sources */,
 				088F459D1A787263000CAB07 /* InitialViewController.m in Sources */,
-				088F45991A786E6F000CAB07 /* MyIndoorManager.m in Sources */,
 				088F45F71A793CD0000CAB07 /* NSManagedObject+InnerBand.m in Sources */,
 				088F45F51A793CD0000CAB07 /* NSArray+InnerBand.m in Sources */,
 				082767731A696678004BB132 /* AppDelegate.m in Sources */,

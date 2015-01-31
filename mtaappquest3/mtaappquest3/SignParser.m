@@ -7,9 +7,10 @@
 //
 
 #import "SignParser.h"
-#import "CJSONDeserializer.h"
+#import "NSDictionary_JSONExtensions.h"
+#import "Sign.h"
 
-@implementation SignParser
+@implementation SignParser : NSObject 
 
 + (id)sharedParser {
     static SignParser *sharedParser = nil;
@@ -22,11 +23,56 @@
 }
 
 -(void)loadJSON{
-    static NSString *jsonName = @"";
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:jsonName ofType:@"txt"]]];
+    static NSString *jsonName = @"locations";
+    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:jsonName ofType:@"json"]]];
     
     NSError *imError=nil;
-    self.myModel = [CJSONDeserializer deserializer] deserialize:jsonData error:<#(NSError *__autoreleasing *)#>
+    myModel = [NSDictionary dictionaryWithJSONData:jsonData error:&imError];
+    
+    if (imError) {
+        NSLog(@"%@",imError.description);
+    }
+}
+
+-(Location *)getLocationWithZoneName:(NSString *)zoneName{
+    
+    if (myModel) {
+        NSDictionary *zoneDictionary = myModel[zoneName];
+        
+        if (zoneDictionary) {
+            Location *newLocation = [[Location alloc] init];
+            newLocation.name = zoneDictionary[@"name"];;
+            newLocation.descriptionPrimary = zoneDictionary[@"descriptionPrimary"];
+            newLocation.descriptionDetailed = zoneDictionary[@"descriptionDetailed"];
+            NSMutableDictionary *mySigns = [[NSMutableDictionary alloc] init];
+            
+            if (zoneDictionary[@"signs"]) {
+                for (NSDictionary *signDictionary in zoneDictionary[@"signs"]) {
+                    Sign *newSign = [[Sign alloc] init];
+                    newSign.name = signDictionary[@"name"];
+                    newSign.message = signDictionary[@"message"];
+                    newSign.direction = signDictionary[@"direction"];
+                    
+                    [mySigns setObject:newSign forKey:newSign.direction];
+                }
+                newLocation.signs = mySigns;
+            }
+            else{
+                NSLog(@"No signs for zone name %@",zoneName);
+            }
+            
+            return newLocation;
+        }else{
+            NSLog(@"No location for zone name %@",zoneName);
+            return nil;
+        }
+        
+    }else{
+        NSLog(@"JSON was not loaded corretly");
+        return nil;
+    }
+    
+    
 }
 
 @end

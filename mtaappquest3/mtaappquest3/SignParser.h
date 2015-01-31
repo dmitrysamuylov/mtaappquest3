@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface SignParser : NSObject
-
-@property (strong,nonatomic) NSMutableDictionary *myModel;
-
+{
+    NSDictionary *myModel;
+}
 + (id)sharedParser;
-
+-(Location *)getLocationWithZoneName:(NSString *)zoneName;
 
 @end

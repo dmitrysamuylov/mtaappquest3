@@ -1,0 +1,12 @@
+{
+  "Mezzanine1": {
+    "name": "Mezzanine 1",
+    "descriptionPrimary": "Description of everything you can see in the mezzanine",
+    "signs": [
+      "NorthSign": "North Trains list",
+      "EastSign": "East Trains list",
+      "SouthSign": "South Trains list",
+      "WestSign": "West Trains list"
+    ]
+  }
+}

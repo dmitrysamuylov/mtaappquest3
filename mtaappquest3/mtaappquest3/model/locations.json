@@ -1,23 +1,22 @@
 {
-  "Mezzanine1": {
-    "name": "Mezzanine 1",
-    "descriptionPrimary": "Description of everything you can see in the mezzanine",
-    "descriptionDetailed": "",
-      "signs": [{
-                    "name":"North",
-                    "direction":"n",
-                    "message":""
-                },
-                {
-                    "name":"South",
-                    "direction":"s",
-                    "message":""
-                },
-                {
-                "name":"East",
-                "direction":"e",
-                "message":""
-                }
-    ]
-  }
-}
+    "Mezzanine1": {
+        "name": "Mezzanine 1",
+        "descriptionPrimary": "Description of everything you can see in the mezzanine",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"n",
+                  "message":""
+                  },
+                  {
+                  "name":"South",
+                  "direction":"s",
+                  "message":""
+                  },
+                  {
+                  "name":"East",
+                  "direction":"e",
+                  "message":""
+                  }
+                  ]
+    }

@@ -7,6 +7,8 @@
 //
 
 #import "WhereIAmViewController.h"
+#import "Zone.h"
+#import "Sign.h"
 
 @interface WhereIAmViewController ()
 
@@ -141,5 +143,17 @@
 }
 
 */
+
+#pragma mark - Private Helper Methods
+
+- (Zone*)getZone
+{
+    Zone* currentZone = [Zone new];
+    currentZone.name = @"Mezzanine 1";
+    currentZone.descriptionPrimary = @""
+    
+    return
+}
+
 
 @end

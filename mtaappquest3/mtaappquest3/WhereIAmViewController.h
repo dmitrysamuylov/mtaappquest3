@@ -10,13 +10,9 @@
 #import <IndoorGuide/IGMapViewController.h>
 #import <IndoorGuide/IGGuideManager.h>
 
-@interface WhereIAmViewController : IGMapViewController <UIAlertViewDelegate,CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface WhereIAmViewController : IGMapViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IGGuideManager* guide;
 }
-
-@property (weak, nonatomic) IBOutlet UILabel *currentZoneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *currentHeadingLabel;
-
 
 @end

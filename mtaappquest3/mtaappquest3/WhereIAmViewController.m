@@ -17,6 +17,8 @@
 {
 	Location *_currentLocation;
 	IBOutlet UITableView *_SignTableView;
+	NSString *_currentHeadingDirection;
+	NSString *_currentZoneName;
 }
 @end
 
@@ -47,8 +49,6 @@
     }
      */
 	
-//	_currentLocation = [self getCurrentLocation];
-	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:@"passageway_entrance_east"];
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
 
@@ -73,15 +73,18 @@
     [super guideManager:manager didEnterZone:zone_id name:name];
     
     NSString *correctedName = [name isEqualToString:@""]?@"Unnamed":name;
-    
-    self.currentZoneLabel.text = [NSString stringWithFormat:@"%@ - %@",correctedName,@"Grand Central"];
+	
+	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:correctedName];
+	
+	[_SignTableView reloadData];
+    _currentZoneName = [NSString stringWithFormat:@"%@ - %@",correctedName,@"Grand Central"];
 }
 
 -(void)guideManager:(IGGuideManager *)manager didExitZone:(uint32_t)zone_id name:(NSString *)name{
     
     [super guideManager:manager didExitZone:zone_id name:name];
     
-    self.currentZoneLabel.text = @"Unknown";
+    _currentZoneName = @"Unknown";
 }
 
 -(void)guideManager:(IGGuideManager *)manager didUpdateHeading:(CLLocationDirection)newHeading{
@@ -104,13 +107,13 @@
         headingString = @"North";
     }
     
-    self.currentHeadingLabel.text = headingString;
+    _currentHeadingDirection = headingString;
 }
 
 -(void)guideManager:(IGGuideManager *)manager didFailWithError:(NSError *)error{
     
-    self.currentHeadingLabel.text = @"Unknown";
-    self.currentZoneLabel.text = @"Unknown";
+    _currentHeadingDirection = @"Unknown";
+    _currentZoneName = @"Unknown";
     
     NSLog(@"%@",error.description);
 }
@@ -133,6 +136,7 @@
 		{
 			cell.titleLabel.text = @"You are facing:";
 			[cell.titleLabel sizeToFit];
+			
 			cell.descriptionLabel.text = @"You are facing information would go here!";
 			[cell.descriptionLabel sizeToFit];
 		}
@@ -167,30 +171,6 @@
 }
 
 #pragma UITableViewDelegate
-
-//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//	if (indexPath.row < 2)
-//	{
-//		return 80;
-//		
-//	}
-//	else if (indexPath.row < 6)
-//	{
-//		NSString *signDirection = _currentLocation.signs.allKeys[indexPath.row - 2];
-//		Sign *sign = _currentLocation.signs[signDirection];
-//		NSString *signDescription = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
-//		CGRect bounds = [signDescription boundingRectWithSize:CGSizeMake(CGRectGetWidth(tableView.frame), CGFLOAT_MAX)
-//													options:NSStringDrawingUsesLineFragmentOrigin
-//												 attributes:@{ NSFontAttributeName: [UIFont systemFontOfSize:17.0f] }
-//													context:nil];
-//		return CGRectGetHeight(bounds);
-//	}
-//	else
-//	{
-//		return 50;
-//	}
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

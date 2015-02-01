@@ -13,12 +13,15 @@
 #import "SignParser.h"
 #import "LocationSignTableViewCell.h"
 
-@interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate>
+static const NSTimeInterval kZoneUpdateInterval = 2;
+
+@interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate, IGPositioningDelegate, IGDirectionsDelegate>
 {
 	Location *_currentLocation;
 	IBOutlet UITableView *_SignTableView;
 	NSString *_currentHeadingDirection;
 	NSString *_currentZoneName;
+	NSTimeInterval _lastUpdatedZone;
 }
 @end
 
@@ -29,6 +32,9 @@
     // Do any additional setup after loading the view.
 	
     guide = [IGGuideManager sharedManager];
+	guide.positioningDelegate = self;
+	guide.directionsDelegate = self;
+	[guide startUpdates];
     
     // ---------------
     
@@ -46,8 +52,7 @@
     }
     else{
         [self startHeadingReading];
-    }
-     */
+    }*/
 	
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
@@ -74,8 +79,15 @@
     
     NSString *correctedName = [name isEqualToString:@""]?@"Unnamed":name;
 	
-	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:correctedName];
+	Location *newZone = [[SignParser sharedParser] getLocationWithZoneName:correctedName];
+	NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
+	if (!newZone && currentTime - _lastUpdatedZone < kZoneUpdateInterval)
+	{
+		return;
+	}
 	
+	_lastUpdatedZone = currentTime;
+	_currentLocation = newZone;
 	[_SignTableView reloadData];
     _currentZoneName = [NSString stringWithFormat:@"%@ - %@",correctedName,@"Grand Central"];
 }
@@ -87,8 +99,8 @@
     _currentZoneName = @"Unknown";
 }
 
--(void)guideManager:(IGGuideManager *)manager didUpdateHeading:(CLLocationDirection)newHeading{
-    
+-(void)guideManager:(IGGuideManager *)manager didUpdateHeading:(CLLocationDirection)newHeading
+{
     NSString *headingString = @"Calculating...";
     
     if (newHeading < 0) {
@@ -108,6 +120,8 @@
     }
     
     _currentHeadingDirection = headingString;
+	
+	[_SignTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:NO];
 }
 
 -(void)guideManager:(IGGuideManager *)manager didFailWithError:(NSError *)error{
@@ -137,13 +151,13 @@
 			cell.titleLabel.text = @"You are facing:";
 			[cell.titleLabel sizeToFit];
 			
-			cell.descriptionLabel.text = @"You are facing information would go here!";
+			cell.descriptionLabel.text = _currentHeadingDirection;
 			[cell.descriptionLabel sizeToFit];
 		}
 		else
 		{
 			[cell.titleLabel sizeToFit];
-			cell.titleLabel.text = indexPath.row == 0 ? @"You are facing:" : @"You are at the:";
+			cell.titleLabel.text = @"You are at the:";
 			cell.descriptionLabel.text = _currentLocation.name;
 			[cell.descriptionLabel sizeToFit];
 		}

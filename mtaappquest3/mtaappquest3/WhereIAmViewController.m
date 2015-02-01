@@ -48,7 +48,7 @@
      */
 	
 //	_currentLocation = [self getCurrentLocation];
-	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:@"Mezzanine2"];
+	_currentLocation = [[SignParser sharedParser] getLocationWithZoneName:@"passageway_entrance_east"];
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
 
@@ -132,12 +132,16 @@
 		if (indexPath.row == 0)
 		{
 			cell.titleLabel.text = @"You are facing:";
+			[cell.titleLabel sizeToFit];
 			cell.descriptionLabel.text = @"You are facing information would go here!";
+			[cell.descriptionLabel sizeToFit];
 		}
 		else
 		{
+			[cell.titleLabel sizeToFit];
 			cell.titleLabel.text = indexPath.row == 0 ? @"You are facing:" : @"You are at the:";
 			cell.descriptionLabel.text = _currentLocation.name;
+			[cell.descriptionLabel sizeToFit];
 		}
 		
 		return cell;
@@ -147,9 +151,10 @@
 	{
 		LocationSignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationSignCellIdentifier"];
 		
-		NSString *signKey = _currentLocation.signs.allKeys[indexPath.row - 2];
-		NSString *signDescription = _currentLocation.signs[signKey];
-		cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@", signKey, signDescription];
+		NSString *signDirection = _currentLocation.signs.allKeys[indexPath.row - 2];
+		Sign *sign = _currentLocation.signs[signDirection];
+		cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
+		[cell.descriptionLabel sizeToFit];
 		
 		return cell;
 	}
@@ -162,13 +167,55 @@
 }
 
 #pragma UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	if (indexPath.row == 6)
-		return 40;
-	return 60;
-}
 
+//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	if (indexPath.row < 2)
+//	{
+//		return 80;
+//		
+//	}
+//	else if (indexPath.row < 6)
+//	{
+//		NSString *signDirection = _currentLocation.signs.allKeys[indexPath.row - 2];
+//		Sign *sign = _currentLocation.signs[signDirection];
+//		NSString *signDescription = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
+//		CGRect bounds = [signDescription boundingRectWithSize:CGSizeMake(CGRectGetWidth(tableView.frame), CGFLOAT_MAX)
+//													options:NSStringDrawingUsesLineFragmentOrigin
+//												 attributes:@{ NSFontAttributeName: [UIFont systemFontOfSize:17.0f] }
+//													context:nil];
+//		return CGRectGetHeight(bounds);
+//	}
+//	else
+//	{
+//		return 50;
+//	}
+//}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (indexPath.row < 2)
+	{
+		return 100;
+		
+	}
+	else if (indexPath.row < 6)
+	{
+		NSString *signDirection = _currentLocation.signs.allKeys[indexPath.row - 2];
+		Sign *sign = _currentLocation.signs[signDirection];
+		NSString *signDescription = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
+		CGRect bounds = [signDescription boundingRectWithSize:CGSizeMake(CGRectGetWidth(tableView.frame), CGFLOAT_MAX)
+													  options:NSStringDrawingUsesLineFragmentOrigin
+												   attributes:@{ NSFontAttributeName: [UIFont systemFontOfSize:17.0f] }
+													  context:nil];
+		CGFloat height = CGRectGetHeight(bounds);
+		return height < 90 ? 90 : height;
+	}
+	else
+	{
+		return 60;
+	}
+}
 
 /*
 

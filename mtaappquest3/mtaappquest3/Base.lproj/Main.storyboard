@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ImD-K5-33b">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,31 +9,43 @@
         <scene sceneID="FWl-La-bYG">
             <objects>
                 <viewController id="t0S-Pc-1gQ" customClass="WhereIAmViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="nue-Iu-uei">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="nue-Iu-uei">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentSignIdentifier" rowHeight="68" id="Uud-5e-gzE" customClass="CurrentSignTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentSignIdentifier" rowHeight="100" id="Uud-5e-gzE" customClass="CurrentSignTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uud-5e-gzE" id="Vby-Mn-q4w">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-eP-Z0b" userLabel="Label - You are facing:">
-                                            <rect key="frame" x="102" y="11" width="116" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-eP-Z0b" userLabel="Label - You are facing:">
+                                            <rect key="frame" x="104" y="10" width="113" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="bTf-YX-hT8"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-1B-hMe" userLabel="Label - Your Sign">
-                                            <rect key="frame" x="8" y="28" width="304" height="39"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-1B-hMe" userLabel="Label - Your Sign">
+                                            <rect key="frame" x="8" y="31" width="304" height="70"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DPx-1B-hMe" firstAttribute="top" secondItem="5Kf-eP-Z0b" secondAttribute="bottom" id="77A-y0-Gth"/>
+                                        <constraint firstItem="DPx-1B-hMe" firstAttribute="trailing" secondItem="Vby-Mn-q4w" secondAttribute="trailingMargin" id="EtW-3Z-gfR"/>
+                                        <constraint firstAttribute="centerX" secondItem="DPx-1B-hMe" secondAttribute="centerX" id="OGm-sD-Gew"/>
+                                        <constraint firstItem="5Kf-eP-Z0b" firstAttribute="top" secondItem="Vby-Mn-q4w" secondAttribute="topMargin" constant="2" id="S0F-g5-QEJ"/>
+                                        <constraint firstItem="DPx-1B-hMe" firstAttribute="leading" secondItem="Vby-Mn-q4w" secondAttribute="leadingMargin" id="XZW-Eg-m3R"/>
+                                        <constraint firstAttribute="centerX" secondItem="5Kf-eP-Z0b" secondAttribute="centerX" constant="-0.5" id="kp3-in-jbV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -42,37 +53,39 @@
                                     <outlet property="titleLabel" destination="5Kf-eP-Z0b" id="VCu-oj-X49"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationSignCellIdentifier" rowHeight="78" id="OWF-6H-Clf" customClass="LocationSignTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationSignCellIdentifier" rowHeight="90" id="OWF-6H-Clf" customClass="LocationSignTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OWF-6H-Clf" id="xGf-eA-So1">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign info will go here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-Wh-DEM" userLabel="Label - Sign info will go here">
-                                            <rect key="frame" x="8" y="8" width="304" height="84"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign info will go here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-Wh-DEM" userLabel="Label - Sign info will go here">
+                                            <rect key="frame" x="8" y="0.0" width="304" height="90"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="leading" secondItem="xGf-eA-So1" secondAttribute="leadingMargin" id="5fT-Wx-5YY"/>
+                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="trailing" secondItem="xGf-eA-So1" secondAttribute="trailingMargin" id="eFY-57-6KA"/>
+                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="top" secondItem="xGf-eA-So1" secondAttribute="topMargin" constant="-8" id="g6W-0L-bSJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Wty-Wh-DEM" id="f2I-jj-nHV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecalibrateCellIdentifier" rowHeight="72" id="hZy-t0-d0P" customClass="RecalibrateTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecalibrateCellIdentifier" rowHeight="60" id="hZy-t0-d0P" customClass="RecalibrateTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZy-t0-d0P" id="oDZ-ST-nvR">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-yV-oKQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-yV-oKQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                             <color key="backgroundColor" red="0.0" green="0.66666666666666663" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="TxU-yV-oKQ" secondAttribute="height" multiplier="320:71" constant="-4.5070422535211492" id="Jq0-q4-sgi"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <state key="normal" title="Recalibrate my location">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,8 +94,11 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TxU-yV-oKQ" firstAttribute="top" secondItem="oDZ-ST-nvR" secondAttribute="top" id="MWb-gb-9Fs"/>
-                                        <constraint firstItem="TxU-yV-oKQ" firstAttribute="leading" secondItem="oDZ-ST-nvR" secondAttribute="leading" id="aGE-QW-rtc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TxU-yV-oKQ" secondAttribute="bottom" constant="-8.5" id="AF7-r1-IJR"/>
+                                        <constraint firstItem="TxU-yV-oKQ" firstAttribute="leading" secondItem="oDZ-ST-nvR" secondAttribute="leading" id="SUx-q6-laN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TxU-yV-oKQ" secondAttribute="trailing" constant="-8" id="iV9-2M-2nk"/>
+                                        <constraint firstItem="TxU-yV-oKQ" firstAttribute="leading" secondItem="oDZ-ST-nvR" secondAttribute="leadingMargin" constant="-8" id="lV2-dg-jLp"/>
+                                        <constraint firstItem="TxU-yV-oKQ" firstAttribute="top" secondItem="oDZ-ST-nvR" secondAttribute="top" id="oBl-53-giy"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

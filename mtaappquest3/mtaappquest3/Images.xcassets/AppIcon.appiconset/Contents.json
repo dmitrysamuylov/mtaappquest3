@@ -23,13 +23,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "120 - iPhone@2x.png",
+      "filename" : "wayfindLogo_120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "placeholderIcon@3x.png",
+      "filename" : "wayfindLogo_180-1.png",
       "scale" : "3x"
     }
   ],

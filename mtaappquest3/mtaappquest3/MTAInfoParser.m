@@ -55,11 +55,11 @@
     
     if (loadedArray) {
         self.routes = [NSMutableArray array];
-        NSLog(@"Parsing routes: %d lines",loadedArray.count);
+        NSLog(@"Parsing routes: %lu lines",(unsigned long)loadedArray.count);
         
         for (int k=1; k<loadedArray.count; k++) {
             
-            NSLog(@"Parsing route %d / %d",k,loadedArray.count);
+            NSLog(@"Parsing route %d / %lu",k,(unsigned long)loadedArray.count);
             
             NSArray *line = loadedArray[k];
             NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
@@ -93,11 +93,11 @@
     
     if (loadedArray) {
         self.trips = [NSMutableArray array];
-        NSLog(@"Parsing trips: %d lines",loadedArray.count);
+        NSLog(@"Parsing trips: %lu lines",(unsigned long)loadedArray.count);
         
         for (int k=1; k<loadedArray.count; k++) {
             
-            NSLog(@"Parsing trip %d / %d",k,loadedArray.count);
+            NSLog(@"Parsing trip %d / %lu",k,(unsigned long)loadedArray.count);
             
             NSArray *line = loadedArray[k];
             NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
@@ -123,11 +123,11 @@
     
     if (loadedArray) {
         self.stops = [NSMutableArray array];
-        NSLog(@"Parsing stops: %d lines",loadedArray.count);
+        NSLog(@"Parsing stops: %lu lines",(unsigned long)loadedArray.count);
         
         for (int k=1; k<loadedArray.count; k++) {
             
-            NSLog(@"Parsing stop %d / %d",k,loadedArray.count);
+            NSLog(@"Parsing stop %d / %lu",k,(unsigned long)loadedArray.count);
             
             NSArray *line = loadedArray[k];
             NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
@@ -152,11 +152,11 @@
     
     if (loadedArray) {
         self.zones = [NSMutableArray array];
-        NSLog(@"Parsing zones: %d lines",loadedArray.count);
+        NSLog(@"Parsing zones: %lu lines",(unsigned long)loadedArray.count);
         
         for (int k=1; k<loadedArray.count; k++) {
             
-            NSLog(@"Parsing zone %d / %d",k,loadedArray.count);
+            NSLog(@"Parsing zone %d / %lu",k,(unsigned long)loadedArray.count);
             
             NSArray *line = loadedArray[k];
             NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
@@ -184,11 +184,11 @@
     
     if (loadedArray) {
         self.stoptimes = [NSMutableArray array];
-        NSLog(@"Parsing stop times: %d lines",loadedArray.count);
+        NSLog(@"Parsing stop times: %lu lines",(unsigned long)loadedArray.count);
         
         for (int k=1; k<loadedArray.count; k++) {
             
-            NSLog(@"Parsing stop times %d / %d",k,loadedArray.count);
+            NSLog(@"Parsing stop times %d / %lu",k,(unsigned long)loadedArray.count);
             
             NSArray *line = loadedArray[k];
             NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
@@ -209,7 +209,7 @@
 -(NSString *)timeForZoneName:(NSString *)zoneName{
     
     
-    
+    return @"";
 }
 
 #pragma mark - UTil methods

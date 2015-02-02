@@ -138,7 +138,7 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 7;
+	return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -166,7 +166,7 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 		return cell;
 
 	}
-	else if (indexPath.row < 6)
+	else
 	{
 		LocationSignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationSignCellIdentifier"];
 		
@@ -175,12 +175,6 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 		cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
 		[cell.descriptionLabel sizeToFit];
 		
-		return cell;
-	}
-	else
-	{
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecalibrateCellIdentifier"];
-
 		return cell;
 	}
 }

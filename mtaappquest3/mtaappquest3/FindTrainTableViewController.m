@@ -29,7 +29,7 @@
     routes = [trips valueForKeyPath:@"@distinctUnionOfObjects.myRoute"];
     routes = [routes sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"shortName" ascending:YES]]];*/
     
-    routes = [Route allOrderedBy:@"shortName" ascending:YES];
+    //routes = [Route allOrderedBy:@"shortName" ascending:YES];
 
 }
 

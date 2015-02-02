@@ -21,17 +21,21 @@
     [guide setNDDPath:[[NSBundle mainBundle] pathForResource:@"gcs-zones" ofType:@"ndd"]];
     guide.directionsDelegate = self;
     guide.positioningDelegate = self;
-    //[guide startUpdates];
     
-    //[self startTimer];
+    //When in Grand Central
+    [guide startUpdates];
+    
+    [self startTimer];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    UITabBarController *main = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarScene"];
-    [self showDetailViewController:main sender:nil];
+    //For testing without beacon signal
+    
+    /*UITabBarController *main = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarScene"];
+    [self showDetailViewController:main sender:nil];*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +72,7 @@
     
     [super guideManager:manager didUpdateToLocation:newLocation fromLocation:oldLocation];
     
-    UITabBarController *main = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarScene"];
+    UITabBarController *main = [self.storyboard instantiateViewControllerWithIdentifier:@"WhereIAmScene"];
     
     [self showDetailViewController:main sender:nil];
 }
@@ -76,12 +80,36 @@
 -(void)guideManager:(IGGuideManager *)manager didFailWithError:(NSError *)error{
     
     [guide stopUpdates];
+    [self handleError:error];
+    
+}
+
+-(void)handleError:(NSError *)error{
+    
+    NSLog(@"%@",error);
     self.loadingView.alpha = 0;
+    self.loadingMessage.text = error.userInfo[@"msg"];
+    self.timeoutMessage.alpha = 0;
     
-    UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Loading Error" message:error.userInfo[@"msg"] delegate:self cancelButtonTitle:@"Retry" otherButtonTitles:nil];
-    [a show];
+    [connectionTimer invalidate];
+    connectionTimer = nil;
     
-    NSLog(@"%@",error.description);
+    switch (error.code) {
+        case 1:
+            self.refreshButton.alpha = 1;
+            break;
+        case 3:
+        {
+            
+            break;
+        }
+        default:
+            break;
+    }
+    
+    
+    
+    
 }
 
 #pragma mark UIAlertView delegate methods
@@ -91,5 +119,18 @@
     [guide startUpdates];
     self.loadingView.alpha = 1;
 }
+
+- (IBAction)refreshPressed:(UIButton *)sender {
+    
+    [guide startUpdates];
+    self.refreshButton.alpha = 0;
+    self.timeoutMessage.alpha = 0;
+    self.loadingView.alpha = 1;
+    self.loadingMessage.text = @"Hang on while we look for a nearby beacon...";
+    
+    [self startTimer];
+    
+}
+
 
 @end

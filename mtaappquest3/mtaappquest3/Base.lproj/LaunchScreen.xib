@@ -10,44 +10,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccessWay" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="16" y="248" width="288" height="33.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a more accesible subway!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkn-4d-2O8">
-                    <rect key="frame" x="16" y="296.5" width="288" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="Ogx-ki-0JI"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-Ri-Oa1">
+                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-Ri-Oa1">
                     <rect key="frame" x="150" y="341" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="ejm-0k-2jB"/>
                         <constraint firstAttribute="height" constant="20" id="lo2-3p-jkW"/>
                     </constraints>
                 </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="KtD-2w-13y">
+                    <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="9yJ-32-4di"/>
+                        <constraint firstAttribute="height" constant="250" id="EOm-PN-jQk"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="hTY-Ri-Oa1" secondAttribute="centerX" id="25S-H1-Gqh"/>
-                <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="16" id="FLe-l9-Wej"/>
-                <constraint firstItem="Mkn-4d-2O8" firstAttribute="leading" secondItem="kId-c2-rCX" secondAttribute="leading" id="Tqh-n9-xZD"/>
-                <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" constant="19.5" id="W2R-xu-CXg"/>
-                <constraint firstItem="Mkn-4d-2O8" firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" id="ZxH-mS-jiI"/>
-                <constraint firstItem="hTY-Ri-Oa1" firstAttribute="top" secondItem="Mkn-4d-2O8" secondAttribute="bottom" constant="23.5" id="deJ-sF-AKf"/>
-                <constraint firstItem="Mkn-4d-2O8" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="15" id="p0b-mG-jK4"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="uHg-4S-GmJ"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="zD1-et-7Ma"/>
+                <constraint firstAttribute="centerY" secondItem="KtD-2w-13y" secondAttribute="centerY" id="kZm-BV-wWW"/>
+                <constraint firstAttribute="centerX" secondItem="KtD-2w-13y" secondAttribute="centerX" id="oUE-lz-nkM"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="launchScreenImage" width="1280" height="2272"/>
+    </resources>
 </document>

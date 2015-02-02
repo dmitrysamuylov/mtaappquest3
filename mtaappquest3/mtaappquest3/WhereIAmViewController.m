@@ -55,6 +55,7 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
     }*/
 	
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
+	[self guideManager:guide didEnterZone:1 name:@"passageway_1"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -181,33 +182,6 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecalibrateCellIdentifier"];
 
 		return cell;
-	}
-}
-
-#pragma UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	if (indexPath.row < 2)
-	{
-		return 100;
-		
-	}
-	else if (indexPath.row < 6)
-	{
-		NSString *signDirection = _currentLocation.signs.allKeys[indexPath.row - 2];
-		Sign *sign = _currentLocation.signs[signDirection];
-		NSString *signDescription = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
-		CGRect bounds = [signDescription boundingRectWithSize:CGSizeMake(CGRectGetWidth(tableView.frame), CGFLOAT_MAX)
-													  options:NSStringDrawingUsesLineFragmentOrigin
-												   attributes:@{ NSFontAttributeName: [UIFont systemFontOfSize:17.0f] }
-													  context:nil];
-		CGFloat height = CGRectGetHeight(bounds);
-		return height < 90 ? 90 : height;
-	}
-	else
-	{
-		return 60;
 	}
 }
 

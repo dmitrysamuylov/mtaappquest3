@@ -13,10 +13,5 @@
 
 @implementation Trip
 
-@dynamic id;
-@dynamic headsign;
-@dynamic directionID;
-@dynamic myRoute;
-@dynamic stopTimes;
 
 @end

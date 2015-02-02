@@ -12,9 +12,4 @@
 
 @implementation Stop
 
-@dynamic id;
-@dynamic name;
-@dynamic stopDescription;
-@dynamic stopTimes;
-
 @end

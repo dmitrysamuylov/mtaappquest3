@@ -17,8 +17,11 @@
     int secondsPassed;
 }
 
-@property (weak, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingView;
+@property (weak, nonatomic) IBOutlet UILabel *loadingMessage;
 @property (weak, nonatomic) IBOutlet UILabel *timeoutMessage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loadingMessageHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 
 @end

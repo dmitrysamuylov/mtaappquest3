@@ -142,7 +142,7 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 7;
+	return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,7 +195,7 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 		return cell;
 
 	}
-	else if (indexPath.row < 6)
+	else
 	{
 		LocationSignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationSignCellIdentifier"];
 		
@@ -204,12 +204,6 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 		cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@", sign.direction, sign.message];
 		[cell.descriptionLabel sizeToFit];
 		
-		return cell;
-	}
-	else
-	{
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecalibrateCellIdentifier"];
-
 		return cell;
 	}
 }

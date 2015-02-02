@@ -14,10 +14,5 @@
 
 @implementation StopTime
 
-@dynamic arrivalTime;
-@dynamic departureTime;
-@dynamic myTrip;
-@dynamic myStop;
-@dynamic myZone;
 
 @end

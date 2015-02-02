@@ -28,25 +28,6 @@
 		088F45A31A7880CB000CAB07 /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45A21A7880CB000CAB07 /* TrainCell.m */; };
 		088F45A71A788116000CAB07 /* MTAModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088F45A51A788116000CAB07 /* MTAModel.xcdatamodeld */; };
 		088F45AB1A793BDD000CAB07 /* routes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 088F45AA1A793BDD000CAB07 /* routes.txt */; };
-		088F45F51A793CD0000CAB07 /* NSArray+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45BB1A793CD0000CAB07 /* NSArray+InnerBand.m */; };
-		088F45F61A793CD0000CAB07 /* NSDate+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45BD1A793CD0000CAB07 /* NSDate+InnerBand.m */; };
-		088F45F71A793CD0000CAB07 /* NSManagedObject+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45BF1A793CD0000CAB07 /* NSManagedObject+InnerBand.m */; };
-		088F45F81A793CD0000CAB07 /* NSMutableArray+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45C11A793CD0000CAB07 /* NSMutableArray+InnerBand.m */; };
-		088F45F91A793CD0000CAB07 /* NSMutableString+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45C31A793CD0000CAB07 /* NSMutableString+InnerBand.m */; };
-		088F45FA1A793CD0000CAB07 /* NSNumber+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45C51A793CD0000CAB07 /* NSNumber+InnerBand.m */; };
-		088F45FB1A793CD0000CAB07 /* NSObject+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45C71A793CD0000CAB07 /* NSObject+InnerBand.m */; };
-		088F45FC1A793CD0000CAB07 /* NSString+Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45C91A793CD0000CAB07 /* NSString+Encoding.m */; };
-		088F45FD1A793CD0000CAB07 /* NSString+InnerBand.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45CB1A793CD0000CAB07 /* NSString+InnerBand.m */; };
-		088F46011A793CD0000CAB07 /* IBFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45D31A793CD0000CAB07 /* IBFunctions.m */; };
-		088F46031A793CD0000CAB07 /* IBCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45DC1A793CD0000CAB07 /* IBCoreDataStore.m */; };
-		088F46041A793CD0000CAB07 /* IBBlockBasedDispatchMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45E11A793CD0000CAB07 /* IBBlockBasedDispatchMessage.m */; };
-		088F46051A793CD0000CAB07 /* IBHTTPGetRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45E31A793CD0000CAB07 /* IBHTTPGetRequestMessage.m */; };
-		088F46061A793CD0000CAB07 /* IBHTTPPostRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45E51A793CD0000CAB07 /* IBHTTPPostRequestMessage.m */; };
-		088F46071A793CD0000CAB07 /* IBSequencedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45E71A793CD0000CAB07 /* IBSequencedMessage.m */; };
-		088F46081A793CD0000CAB07 /* IBDispatchMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45E91A793CD0000CAB07 /* IBDispatchMessage.m */; };
-		088F46091A793CD0000CAB07 /* IBMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45EB1A793CD0000CAB07 /* IBMessageCenter.m */; };
-		088F460A1A793CD0000CAB07 /* IBMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45ED1A793CD0000CAB07 /* IBMessageProcessor.m */; };
-		088F460B1A793CD0000CAB07 /* IBTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F45EF1A793CD0000CAB07 /* IBTargetAction.m */; };
 		088F460D1A793CDD000CAB07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088F460C1A793CDD000CAB07 /* CoreData.framework */; };
 		088F460F1A793CE4000CAB07 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088F460E1A793CE4000CAB07 /* CoreText.framework */; };
 		088F46131A793D10000CAB07 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F46121A793D10000CAB07 /* CHCSVParser.m */; };
@@ -60,6 +41,12 @@
 		088F46531A798CCC000CAB07 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F46521A798CCC000CAB07 /* Route.m */; };
 		088F46551A798D15000CAB07 /* zones.txt in Resources */ = {isa = PBXBuildFile; fileRef = 088F46541A798D15000CAB07 /* zones.txt */; };
 		088F46571A7B1219000CAB07 /* gcs-zones.ndd in Resources */ = {isa = PBXBuildFile; fileRef = 088F46561A7B1219000CAB07 /* gcs-zones.ndd */; };
+		08B74E9A1A7FA152007EEC27 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08B74E951A7FA152007EEC27 /* Montserrat-Black.otf */; };
+		08B74E9B1A7FA152007EEC27 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08B74E961A7FA152007EEC27 /* Montserrat-Bold.otf */; };
+		08B74E9C1A7FA152007EEC27 /* Montserrat-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08B74E971A7FA152007EEC27 /* Montserrat-Hairline.otf */; };
+		08B74E9D1A7FA152007EEC27 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08B74E981A7FA152007EEC27 /* Montserrat-Light.otf */; };
+		08B74E9E1A7FA152007EEC27 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08B74E991A7FA152007EEC27 /* Montserrat-Regular.otf */; };
+		08C9A8921A7ECDED0042982E /* MTAInfoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C9A8911A7ECDED0042982E /* MTAInfoParser.m */; };
 		2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */; };
 		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
 		2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */; };
@@ -114,47 +101,6 @@
 		088F45A21A7880CB000CAB07 /* TrainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainCell.m; sourceTree = "<group>"; };
 		088F45A61A788116000CAB07 /* MTAModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTAModel.xcdatamodel; sourceTree = "<group>"; };
 		088F45AA1A793BDD000CAB07 /* routes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = routes.txt; sourceTree = "<group>"; };
-		088F45BA1A793CD0000CAB07 /* NSArray+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+InnerBand.h"; sourceTree = "<group>"; };
-		088F45BB1A793CD0000CAB07 /* NSArray+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+InnerBand.m"; sourceTree = "<group>"; };
-		088F45BC1A793CD0000CAB07 /* NSDate+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InnerBand.h"; sourceTree = "<group>"; };
-		088F45BD1A793CD0000CAB07 /* NSDate+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InnerBand.m"; sourceTree = "<group>"; };
-		088F45BE1A793CD0000CAB07 /* NSManagedObject+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+InnerBand.h"; sourceTree = "<group>"; };
-		088F45BF1A793CD0000CAB07 /* NSManagedObject+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+InnerBand.m"; sourceTree = "<group>"; };
-		088F45C01A793CD0000CAB07 /* NSMutableArray+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+InnerBand.h"; sourceTree = "<group>"; };
-		088F45C11A793CD0000CAB07 /* NSMutableArray+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+InnerBand.m"; sourceTree = "<group>"; };
-		088F45C21A793CD0000CAB07 /* NSMutableString+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+InnerBand.h"; sourceTree = "<group>"; };
-		088F45C31A793CD0000CAB07 /* NSMutableString+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+InnerBand.m"; sourceTree = "<group>"; };
-		088F45C41A793CD0000CAB07 /* NSNumber+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+InnerBand.h"; sourceTree = "<group>"; };
-		088F45C51A793CD0000CAB07 /* NSNumber+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+InnerBand.m"; sourceTree = "<group>"; };
-		088F45C61A793CD0000CAB07 /* NSObject+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+InnerBand.h"; sourceTree = "<group>"; };
-		088F45C71A793CD0000CAB07 /* NSObject+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+InnerBand.m"; sourceTree = "<group>"; };
-		088F45C81A793CD0000CAB07 /* NSString+Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encoding.h"; sourceTree = "<group>"; };
-		088F45C91A793CD0000CAB07 /* NSString+Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encoding.m"; sourceTree = "<group>"; };
-		088F45CA1A793CD0000CAB07 /* NSString+InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InnerBand.h"; sourceTree = "<group>"; };
-		088F45CB1A793CD0000CAB07 /* NSString+InnerBand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InnerBand.m"; sourceTree = "<group>"; };
-		088F45D21A793CD0000CAB07 /* IBFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBFunctions.h; sourceTree = "<group>"; };
-		088F45D31A793CD0000CAB07 /* IBFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBFunctions.m; sourceTree = "<group>"; };
-		088F45D51A793CD0000CAB07 /* IBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBConstants.h; sourceTree = "<group>"; };
-		088F45D61A793CD0000CAB07 /* IBTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTypes.h; sourceTree = "<group>"; };
-		088F45DB1A793CD0000CAB07 /* IBCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBCoreDataStore.h; sourceTree = "<group>"; };
-		088F45DC1A793CD0000CAB07 /* IBCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBCoreDataStore.m; sourceTree = "<group>"; };
-		088F45DD1A793CD0000CAB07 /* InnerBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerBand.h; sourceTree = "<group>"; };
-		088F45E01A793CD0000CAB07 /* IBBlockBasedDispatchMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBBlockBasedDispatchMessage.h; sourceTree = "<group>"; };
-		088F45E11A793CD0000CAB07 /* IBBlockBasedDispatchMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBBlockBasedDispatchMessage.m; sourceTree = "<group>"; };
-		088F45E21A793CD0000CAB07 /* IBHTTPGetRequestMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBHTTPGetRequestMessage.h; sourceTree = "<group>"; };
-		088F45E31A793CD0000CAB07 /* IBHTTPGetRequestMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBHTTPGetRequestMessage.m; sourceTree = "<group>"; };
-		088F45E41A793CD0000CAB07 /* IBHTTPPostRequestMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBHTTPPostRequestMessage.h; sourceTree = "<group>"; };
-		088F45E51A793CD0000CAB07 /* IBHTTPPostRequestMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBHTTPPostRequestMessage.m; sourceTree = "<group>"; };
-		088F45E61A793CD0000CAB07 /* IBSequencedMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBSequencedMessage.h; sourceTree = "<group>"; };
-		088F45E71A793CD0000CAB07 /* IBSequencedMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBSequencedMessage.m; sourceTree = "<group>"; };
-		088F45E81A793CD0000CAB07 /* IBDispatchMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBDispatchMessage.h; sourceTree = "<group>"; };
-		088F45E91A793CD0000CAB07 /* IBDispatchMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBDispatchMessage.m; sourceTree = "<group>"; };
-		088F45EA1A793CD0000CAB07 /* IBMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMessageCenter.h; sourceTree = "<group>"; };
-		088F45EB1A793CD0000CAB07 /* IBMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMessageCenter.m; sourceTree = "<group>"; };
-		088F45EC1A793CD0000CAB07 /* IBMessageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMessageProcessor.h; sourceTree = "<group>"; };
-		088F45ED1A793CD0000CAB07 /* IBMessageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMessageProcessor.m; sourceTree = "<group>"; };
-		088F45EE1A793CD0000CAB07 /* IBTargetAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTargetAction.h; sourceTree = "<group>"; };
-		088F45EF1A793CD0000CAB07 /* IBTargetAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTargetAction.m; sourceTree = "<group>"; };
 		088F460C1A793CDD000CAB07 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		088F460E1A793CE4000CAB07 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		088F46111A793D10000CAB07 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -174,6 +120,13 @@
 		088F46521A798CCC000CAB07 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		088F46541A798D15000CAB07 /* zones.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zones.txt; sourceTree = "<group>"; };
 		088F46561A7B1219000CAB07 /* gcs-zones.ndd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gcs-zones.ndd"; sourceTree = "<group>"; };
+		08B74E951A7FA152007EEC27 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		08B74E961A7FA152007EEC27 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		08B74E971A7FA152007EEC27 /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
+		08B74E981A7FA152007EEC27 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		08B74E991A7FA152007EEC27 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		08C9A8901A7ECDED0042982E /* MTAInfoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAInfoParser.h; sourceTree = "<group>"; };
+		08C9A8911A7ECDED0042982E /* MTAInfoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAInfoParser.m; sourceTree = "<group>"; };
 		2374C1241A7D961C002A04D7 /* CurrentSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSignTableViewCell.h; sourceTree = "<group>"; };
 		2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSignTableViewCell.m; sourceTree = "<group>"; };
 		2374C1281A7D96B4002A04D7 /* LocationSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSignTableViewCell.h; sourceTree = "<group>"; };
@@ -253,6 +206,7 @@
 		0827676D1A696678004BB132 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08B74E9F1A7FA156007EEC27 /* Fonts */,
 				0827679C1A6966E8004BB132 /* grand-central-1.ndd */,
 				088F46561A7B1219000CAB07 /* gcs-zones.ndd */,
 				0827676E1A696678004BB132 /* Info.plist */,
@@ -341,7 +295,6 @@
 			children = (
 				0846A1DD1A7D8E6F0037F4BC /* TouchJSON */,
 				088F46101A793D10000CAB07 /* CHCSVParser */,
-				088F45AC1A793CD0000CAB07 /* InnerBand */,
 				0846A1DA1A7D8BF50037F4BC /* SignParser.h */,
 				0846A1DB1A7D8BF50037F4BC /* SignParser.m */,
 			);
@@ -372,120 +325,10 @@
 				088F46461A798CCB000CAB07 /* Stop.m */,
 				088F46441A797F09000CAB07 /* GTFS files */,
 				088F45A51A788116000CAB07 /* MTAModel.xcdatamodeld */,
+				08C9A8901A7ECDED0042982E /* MTAInfoParser.h */,
+				08C9A8911A7ECDED0042982E /* MTAInfoParser.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		088F45AC1A793CD0000CAB07 /* InnerBand */ = {
-			isa = PBXGroup;
-			children = (
-				088F45AD1A793CD0000CAB07 /* Controls */,
-				088F45B61A793CD0000CAB07 /* Core */,
-				088F45DA1A793CD0000CAB07 /* Core Data */,
-				088F45DD1A793CD0000CAB07 /* InnerBand.h */,
-				088F45DE1A793CD0000CAB07 /* Message Center */,
-			);
-			path = InnerBand;
-			sourceTree = "<group>";
-		};
-		088F45AD1A793CD0000CAB07 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controls;
-			sourceTree = "<group>";
-		};
-		088F45B61A793CD0000CAB07 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				088F45B71A793CD0000CAB07 /* Categories */,
-				088F45D21A793CD0000CAB07 /* IBFunctions.h */,
-				088F45D31A793CD0000CAB07 /* IBFunctions.m */,
-				088F45D41A793CD0000CAB07 /* Macros */,
-				088F45D71A793CD0000CAB07 /* Utils */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		088F45B71A793CD0000CAB07 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				088F45BA1A793CD0000CAB07 /* NSArray+InnerBand.h */,
-				088F45BB1A793CD0000CAB07 /* NSArray+InnerBand.m */,
-				088F45BC1A793CD0000CAB07 /* NSDate+InnerBand.h */,
-				088F45BD1A793CD0000CAB07 /* NSDate+InnerBand.m */,
-				088F45BE1A793CD0000CAB07 /* NSManagedObject+InnerBand.h */,
-				088F45BF1A793CD0000CAB07 /* NSManagedObject+InnerBand.m */,
-				088F45C01A793CD0000CAB07 /* NSMutableArray+InnerBand.h */,
-				088F45C11A793CD0000CAB07 /* NSMutableArray+InnerBand.m */,
-				088F45C21A793CD0000CAB07 /* NSMutableString+InnerBand.h */,
-				088F45C31A793CD0000CAB07 /* NSMutableString+InnerBand.m */,
-				088F45C41A793CD0000CAB07 /* NSNumber+InnerBand.h */,
-				088F45C51A793CD0000CAB07 /* NSNumber+InnerBand.m */,
-				088F45C61A793CD0000CAB07 /* NSObject+InnerBand.h */,
-				088F45C71A793CD0000CAB07 /* NSObject+InnerBand.m */,
-				088F45C81A793CD0000CAB07 /* NSString+Encoding.h */,
-				088F45C91A793CD0000CAB07 /* NSString+Encoding.m */,
-				088F45CA1A793CD0000CAB07 /* NSString+InnerBand.h */,
-				088F45CB1A793CD0000CAB07 /* NSString+InnerBand.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		088F45D41A793CD0000CAB07 /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				088F45D51A793CD0000CAB07 /* IBConstants.h */,
-				088F45D61A793CD0000CAB07 /* IBTypes.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
-		088F45D71A793CD0000CAB07 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		088F45DA1A793CD0000CAB07 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				088F45DB1A793CD0000CAB07 /* IBCoreDataStore.h */,
-				088F45DC1A793CD0000CAB07 /* IBCoreDataStore.m */,
-			);
-			path = "Core Data";
-			sourceTree = "<group>";
-		};
-		088F45DE1A793CD0000CAB07 /* Message Center */ = {
-			isa = PBXGroup;
-			children = (
-				088F45DF1A793CD0000CAB07 /* Dispatch Messages */,
-				088F45E81A793CD0000CAB07 /* IBDispatchMessage.h */,
-				088F45E91A793CD0000CAB07 /* IBDispatchMessage.m */,
-				088F45EA1A793CD0000CAB07 /* IBMessageCenter.h */,
-				088F45EB1A793CD0000CAB07 /* IBMessageCenter.m */,
-				088F45EC1A793CD0000CAB07 /* IBMessageProcessor.h */,
-				088F45ED1A793CD0000CAB07 /* IBMessageProcessor.m */,
-				088F45EE1A793CD0000CAB07 /* IBTargetAction.h */,
-				088F45EF1A793CD0000CAB07 /* IBTargetAction.m */,
-			);
-			path = "Message Center";
-			sourceTree = "<group>";
-		};
-		088F45DF1A793CD0000CAB07 /* Dispatch Messages */ = {
-			isa = PBXGroup;
-			children = (
-				088F45E01A793CD0000CAB07 /* IBBlockBasedDispatchMessage.h */,
-				088F45E11A793CD0000CAB07 /* IBBlockBasedDispatchMessage.m */,
-				088F45E21A793CD0000CAB07 /* IBHTTPGetRequestMessage.h */,
-				088F45E31A793CD0000CAB07 /* IBHTTPGetRequestMessage.m */,
-				088F45E41A793CD0000CAB07 /* IBHTTPPostRequestMessage.h */,
-				088F45E51A793CD0000CAB07 /* IBHTTPPostRequestMessage.m */,
-				088F45E61A793CD0000CAB07 /* IBSequencedMessage.h */,
-				088F45E71A793CD0000CAB07 /* IBSequencedMessage.m */,
-			);
-			path = "Dispatch Messages";
 			sourceTree = "<group>";
 		};
 		088F46101A793D10000CAB07 /* CHCSVParser */ = {
@@ -507,6 +350,18 @@
 				088F46541A798D15000CAB07 /* zones.txt */,
 			);
 			name = "GTFS files";
+			sourceTree = "<group>";
+		};
+		08B74E9F1A7FA156007EEC27 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				08B74E951A7FA152007EEC27 /* Montserrat-Black.otf */,
+				08B74E961A7FA152007EEC27 /* Montserrat-Bold.otf */,
+				08B74E971A7FA152007EEC27 /* Montserrat-Hairline.otf */,
+				08B74E981A7FA152007EEC27 /* Montserrat-Light.otf */,
+				08B74E991A7FA152007EEC27 /* Montserrat-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		2374C11C1A7D8E9F002A04D7 /* CurrentSignTableViewCell */ = {
@@ -597,11 +452,11 @@
 				TargetAttributes = {
 					082767691A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = H3VJ3NCEU2;
+						DevelopmentTeam = Y2X429E8XQ;
 					};
 					082767821A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = H3VJ3NCEU2;
+						DevelopmentTeam = Y2X429E8XQ;
 						TestTargetID = 082767691A696678004BB132;
 					};
 				};
@@ -632,13 +487,18 @@
 			files = (
 				088F45AB1A793BDD000CAB07 /* routes.txt in Resources */,
 				088F46251A797E48000CAB07 /* trips.txt in Resources */,
+				08B74E9C1A7FA152007EEC27 /* Montserrat-Hairline.otf in Resources */,
 				088F46571A7B1219000CAB07 /* gcs-zones.ndd in Resources */,
 				082767791A696678004BB132 /* Main.storyboard in Resources */,
+				08B74E9D1A7FA152007EEC27 /* Montserrat-Light.otf in Resources */,
+				08B74E9A1A7FA152007EEC27 /* Montserrat-Black.otf in Resources */,
 				0827677E1A696678004BB132 /* LaunchScreen.xib in Resources */,
 				0827677B1A696678004BB132 /* Images.xcassets in Resources */,
 				088F46551A798D15000CAB07 /* zones.txt in Resources */,
 				088F46241A797E48000CAB07 /* stops.txt in Resources */,
+				08B74E9E1A7FA152007EEC27 /* Montserrat-Regular.otf in Resources */,
 				0827679D1A6966E8004BB132 /* grand-central-1.ndd in Resources */,
+				08B74E9B1A7FA152007EEC27 /* Montserrat-Bold.otf in Resources */,
 				324548731A7D8F7C00A7447D /* locations.json in Resources */,
 				088F46231A797E48000CAB07 /* stop_times.txt in Resources */,
 			);
@@ -658,47 +518,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				088F45F61A793CD0000CAB07 /* NSDate+InnerBand.m in Sources */,
-				088F46041A793CD0000CAB07 /* IBBlockBasedDispatchMessage.m in Sources */,
-				088F45FB1A793CD0000CAB07 /* NSObject+InnerBand.m in Sources */,
-				088F46081A793CD0000CAB07 /* IBDispatchMessage.m in Sources */,
-				088F460A1A793CD0000CAB07 /* IBMessageProcessor.m in Sources */,
 				088F45A71A788116000CAB07 /* MTAModel.xcdatamodeld in Sources */,
 				0846A1E71A7D8E6F0037F4BC /* NSDictionary_JSONExtensions.m in Sources */,
 				0846A1E51A7D8E6F0037F4BC /* CJSONDeserializer.m in Sources */,
 				0846A1E61A7D8E6F0037F4BC /* CJSONSerializer.m in Sources */,
 				0846A1DC1A7D8BF50037F4BC /* SignParser.m in Sources */,
 				088F459D1A787263000CAB07 /* InitialViewController.m in Sources */,
-				088F45F71A793CD0000CAB07 /* NSManagedObject+InnerBand.m in Sources */,
-				088F45F51A793CD0000CAB07 /* NSArray+InnerBand.m in Sources */,
 				082767731A696678004BB132 /* AppDelegate.m in Sources */,
-				088F45F91A793CD0000CAB07 /* NSMutableString+InnerBand.m in Sources */,
 				2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */,
 				2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */,
-				088F45FC1A793CD0000CAB07 /* NSString+Encoding.m in Sources */,
 				088F46131A793D10000CAB07 /* CHCSVParser.m in Sources */,
-				088F46011A793CD0000CAB07 /* IBFunctions.m in Sources */,
 				088F46531A798CCC000CAB07 /* Route.m in Sources */,
-				088F46031A793CD0000CAB07 /* IBCoreDataStore.m in Sources */,
 				088F464D1A798CCC000CAB07 /* Trip.m in Sources */,
 				088F45A01A78802D000CAB07 /* FindTrainTableViewController.m in Sources */,
 				2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */,
-				088F45FD1A793CD0000CAB07 /* NSString+InnerBand.m in Sources */,
 				082767A31A69712F004BB132 /* WhereIAmViewController.m in Sources */,
-				088F45F81A793CD0000CAB07 /* NSMutableArray+InnerBand.m in Sources */,
-				088F46061A793CD0000CAB07 /* IBHTTPPostRequestMessage.m in Sources */,
-				088F45FA1A793CD0000CAB07 /* NSNumber+InnerBand.m in Sources */,
 				088F464A1A798CCC000CAB07 /* StopTime.m in Sources */,
 				324548711A7D895500A7447D /* Sign.m in Sources */,
 				088F46471A798CCB000CAB07 /* Stop.m in Sources */,
 				088F45A31A7880CB000CAB07 /* TrainCell.m in Sources */,
-				088F46071A793CD0000CAB07 /* IBSequencedMessage.m in Sources */,
-				088F460B1A793CD0000CAB07 /* IBTargetAction.m in Sources */,
-				088F46091A793CD0000CAB07 /* IBMessageCenter.m in Sources */,
+				08C9A8921A7ECDED0042982E /* MTAInfoParser.m in Sources */,
 				088F46501A798CCC000CAB07 /* Zone.m in Sources */,
 				082767701A696678004BB132 /* main.m in Sources */,
 				324548701A7D895500A7447D /* Location.m in Sources */,
-				088F46051A793CD0000CAB07 /* IBHTTPGetRequestMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,8 +662,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -830,7 +672,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
 			};
 			name = Debug;
 		};
@@ -838,8 +680,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -848,7 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
 			};
 			name = Release;
 		};

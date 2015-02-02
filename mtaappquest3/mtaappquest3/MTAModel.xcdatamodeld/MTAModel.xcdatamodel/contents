@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Route" representedClassName="Route" syncable="YES">
         <attribute name="backgroundColor" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="longName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="routeDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,7 +10,7 @@
         <relationship name="myTrips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="myRoute" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="Stop" representedClassName="Stop" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stopDescription" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="stopTimes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StopTime" inverseName="myStop" inverseEntity="StopTime" syncable="YES"/>
@@ -25,20 +25,20 @@
     <entity name="Trip" representedClassName="Trip" syncable="YES">
         <attribute name="directionID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="headsign" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
         <relationship name="myRoute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="myTrips" inverseEntity="Route" syncable="YES"/>
         <relationship name="stopTimes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StopTime" inverseName="myTrip" inverseEntity="StopTime" syncable="YES"/>
     </entity>
     <entity name="Zone" representedClassName="Zone" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="stopTimes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StopTime" inverseName="myZone" inverseEntity="StopTime" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Route" positionX="-63" positionY="-18" width="128" height="148"/>
-        <element name="Zone" positionX="-54" positionY="27" width="128" height="88"/>
-        <element name="Trip" positionX="-27" positionY="72" width="128" height="118"/>
+        <element name="Route" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Stop" positionX="-9" positionY="108" width="128" height="103"/>
         <element name="StopTime" positionX="9" positionY="117" width="128" height="118"/>
+        <element name="Trip" positionX="-27" positionY="72" width="128" height="120"/>
+        <element name="Zone" positionX="-54" positionY="27" width="128" height="90"/>
     </elements>
 </model>

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InnerBand.h"
 #import "Route.h"
 #import "StopTime.h"
 #import "Trip.h"

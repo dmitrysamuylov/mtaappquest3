@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CHCSVParser.h"
-#import "InnerBand.h"
 #import "Route.h"
 #import "Stop.h"
 #import "Zone.h"

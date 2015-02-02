@@ -1,0 +1,1 @@
+select departure_time, * from stop_times as st inner join trips as t on st.trip_id = t.trip_id where t.route_id = 'GS' order by departure_time asc --stop_id = '631N' 

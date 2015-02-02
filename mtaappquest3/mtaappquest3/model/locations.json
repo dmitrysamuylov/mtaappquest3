@@ -130,8 +130,8 @@
                   ]
     },
     "passageway_entrance_west": {
-		"name": "Passageway entrance at Shuttle Train platforms. Shuttle Train Platforms start approx 200 feet ahead. Platform number 1 serving tracks 1 and 3 is slightly to your left at 10 o'clock.  Platform number 2 serving track 4 is slightly on your right at 1 o'clock.  There is no track 2. Next train leaves in [TrainLeaves]",
-        "descriptionPrimary": "Passageway to Mezzanine with access to trains 4,5,6 and 7 and exits to Grand Central terminal and  tostreet level",
+		"name": "enter{Passageway entrance at Shuttle Train platforms. Shuttle Train Platforms start approx 200 feet ahead. Platform number 1 serving tracks 1 and 3 is slightly to your left at 10 o'clock.  Platform number 2 serving track 4 is slightly on your right at 1 o'clock.  There is no track 2. Next train leaves in [TrainLeaves]}exist{Passageway to Mezzanine with access to trains 4,5,6 and 7 and exits to Grand Central terminal and  tostreet level}",
+        "descriptionPrimary": "",
         "descriptionDetailed": "",
         "signs": [{
                   "name":"North",

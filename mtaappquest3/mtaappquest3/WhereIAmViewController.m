@@ -14,6 +14,7 @@
 #import "LocationSignTableViewCell.h"
 
 static const NSTimeInterval kZoneUpdateInterval = 2;
+static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 
 @interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate, IGPositioningDelegate, IGDirectionsDelegate>
 {
@@ -21,6 +22,7 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 	IBOutlet UITableView *_SignTableView;
 	NSString *_currentHeadingDirection;
 	NSString *_currentZoneName;
+	NSString *_lastZoneName;
 	NSTimeInterval _lastUpdatedZone;
 }
 @end
@@ -54,8 +56,9 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
         [self startHeadingReading];
     }*/
 	
+	_lastZoneName = nil;
+	
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
-	[self guideManager:guide didEnterZone:1 name:@"passageway_1"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,9 +91,10 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 	}
 	
 	_lastUpdatedZone = currentTime;
+	_lastZoneName = _currentZoneName;
 	_currentLocation = newZone;
 	[_SignTableView reloadData];
-    _currentZoneName = [NSString stringWithFormat:@"%@ - %@",correctedName,@"Grand Central"];
+    _currentZoneName = correctedName;
 }
 
 -(void)guideManager:(IGGuideManager *)manager didExitZone:(uint32_t)zone_id name:(NSString *)name{
@@ -159,7 +163,32 @@ static const NSTimeInterval kZoneUpdateInterval = 2;
 		{
 			[cell.titleLabel sizeToFit];
 			cell.titleLabel.text = @"You are at the:";
-			cell.descriptionLabel.text = _currentLocation.name;
+			NSString *name;
+			
+			if ([_currentZoneName isEqualToString:kSpecialZoneName])
+			{
+				// Going toward Stations
+				if ([_lastZoneName isEqualToString:@"passageway_1"])
+				{
+					NSRange startRange = [_currentLocation.name rangeOfString:@"enter{"];
+					NSRange endRange = [_currentLocation.name rangeOfString:@"}exist{"];
+					NSRange messageRange = NSMakeRange(startRange.length, endRange.location - startRange.length);
+					name = [_currentLocation.name substringWithRange:messageRange];
+				}
+				else // coming from station
+				{
+					NSRange startRange = [_currentLocation.name rangeOfString:@"}exist{"];
+					NSInteger startIndex = startRange.location + startRange.length;
+					NSRange messageRange = NSMakeRange(startIndex, _currentLocation.name.length - startIndex - 1);
+					name = [_currentLocation.name substringWithRange:messageRange];
+				}
+			}
+			else
+			{
+				name = _currentLocation.name;
+			}
+			
+			cell.descriptionLabel.text = name;
 			[cell.descriptionLabel sizeToFit];
 		}
 		

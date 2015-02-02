@@ -7,24 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@class Route, StopTime;
+@interface Trip : NSObject
 
-@interface Trip : NSManagedObject
-
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * headsign;
-@property (nonatomic, retain) NSNumber * directionID;
-@property (nonatomic, retain) Route *myRoute;
-@property (nonatomic, retain) NSSet *stopTimes;
-@end
-
-@interface Trip (CoreDataGeneratedAccessors)
-
-- (void)addStopTimesObject:(StopTime *)value;
-- (void)removeStopTimesObject:(StopTime *)value;
-- (void)addStopTimes:(NSSet *)values;
-- (void)removeStopTimes:(NSSet *)values;
+@property (nonatomic, strong) NSString * identifier;
+@property (nonatomic, strong) NSString * headsign;
+@property (nonatomic, strong) NSNumber * directionID;
+@property (nonatomic, strong) NSString *myRouteID;
 
 @end

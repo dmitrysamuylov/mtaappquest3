@@ -7,23 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@class StopTime;
+@interface Stop : NSObject
 
-@interface Stop : NSManagedObject
-
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * stopDescription;
-@property (nonatomic, retain) NSSet *stopTimes;
-@end
-
-@interface Stop (CoreDataGeneratedAccessors)
-
-- (void)addStopTimesObject:(StopTime *)value;
-- (void)removeStopTimesObject:(StopTime *)value;
-- (void)addStopTimes:(NSSet *)values;
-- (void)removeStopTimes:(NSSet *)values;
+@property (nonatomic, strong) NSString * identifier;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * stopDescription;
 
 @end

@@ -7,13 +7,8 @@
 //
 
 #import "Zone.h"
-#import "StopTime.h"
-
 
 @implementation Zone
 
-@dynamic id;
-@dynamic name;
-@dynamic stopTimes;
 
 @end

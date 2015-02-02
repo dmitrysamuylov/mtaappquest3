@@ -60,6 +60,7 @@
 		088F46531A798CCC000CAB07 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F46521A798CCC000CAB07 /* Route.m */; };
 		088F46551A798D15000CAB07 /* zones.txt in Resources */ = {isa = PBXBuildFile; fileRef = 088F46541A798D15000CAB07 /* zones.txt */; };
 		088F46571A7B1219000CAB07 /* gcs-zones.ndd in Resources */ = {isa = PBXBuildFile; fileRef = 088F46561A7B1219000CAB07 /* gcs-zones.ndd */; };
+		08C9A8921A7ECDED0042982E /* MTAInfoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C9A8911A7ECDED0042982E /* MTAInfoParser.m */; };
 		2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */; };
 		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
 		2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */; };
@@ -174,6 +175,8 @@
 		088F46521A798CCC000CAB07 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		088F46541A798D15000CAB07 /* zones.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zones.txt; sourceTree = "<group>"; };
 		088F46561A7B1219000CAB07 /* gcs-zones.ndd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gcs-zones.ndd"; sourceTree = "<group>"; };
+		08C9A8901A7ECDED0042982E /* MTAInfoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAInfoParser.h; sourceTree = "<group>"; };
+		08C9A8911A7ECDED0042982E /* MTAInfoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAInfoParser.m; sourceTree = "<group>"; };
 		2374C1241A7D961C002A04D7 /* CurrentSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSignTableViewCell.h; sourceTree = "<group>"; };
 		2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSignTableViewCell.m; sourceTree = "<group>"; };
 		2374C1281A7D96B4002A04D7 /* LocationSignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSignTableViewCell.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 				088F46461A798CCB000CAB07 /* Stop.m */,
 				088F46441A797F09000CAB07 /* GTFS files */,
 				088F45A51A788116000CAB07 /* MTAModel.xcdatamodeld */,
+				08C9A8901A7ECDED0042982E /* MTAInfoParser.h */,
+				08C9A8911A7ECDED0042982E /* MTAInfoParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -597,11 +602,11 @@
 				TargetAttributes = {
 					082767691A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = H3VJ3NCEU2;
+						DevelopmentTeam = Y2X429E8XQ;
 					};
 					082767821A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = H3VJ3NCEU2;
+						DevelopmentTeam = Y2X429E8XQ;
 						TestTargetID = 082767691A696678004BB132;
 					};
 				};
@@ -695,6 +700,7 @@
 				088F46071A793CD0000CAB07 /* IBSequencedMessage.m in Sources */,
 				088F460B1A793CD0000CAB07 /* IBTargetAction.m in Sources */,
 				088F46091A793CD0000CAB07 /* IBMessageCenter.m in Sources */,
+				08C9A8921A7ECDED0042982E /* MTAInfoParser.m in Sources */,
 				088F46501A798CCC000CAB07 /* Zone.m in Sources */,
 				082767701A696678004BB132 /* main.m in Sources */,
 				324548701A7D895500A7447D /* Location.m in Sources */,
@@ -820,8 +826,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -830,7 +836,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
 			};
 			name = Debug;
 		};
@@ -838,8 +844,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -848,7 +854,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
 			};
 			name = Release;
 		};

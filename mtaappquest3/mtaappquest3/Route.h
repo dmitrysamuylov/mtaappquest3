@@ -7,26 +7,14 @@
 //
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@class Trip;
+@interface Route : NSObject
 
-@interface Route : NSManagedObject
-
-@property (nonatomic, retain) UIColor* backgroundColor;
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * longName;
-@property (nonatomic, retain) NSString * routeDescription;
-@property (nonatomic, retain) NSString * shortName;
-@property (nonatomic, retain) UIColor* textColor;
-@property (nonatomic, retain) NSSet *myTrips;
-@end
-
-@interface Route (CoreDataGeneratedAccessors)
-
-- (void)addMyTripsObject:(Trip *)value;
-- (void)removeMyTripsObject:(Trip *)value;
-- (void)addMyTrips:(NSSet *)values;
-- (void)removeMyTrips:(NSSet *)values;
+@property (nonatomic, strong) UIColor* backgroundColor;
+@property (nonatomic, strong) NSString * identifier;
+@property (nonatomic, strong) NSString * longName;
+@property (nonatomic, strong) NSString * routeDescription;
+@property (nonatomic, strong) NSString * shortName;
+@property (nonatomic, strong) UIColor* textColor;
 
 @end

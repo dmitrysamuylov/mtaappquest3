@@ -7,16 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@class Stop, Trip, Zone;
+@interface StopTime : NSObject
 
-@interface StopTime : NSManagedObject
-
-@property (nonatomic, retain) NSDate * arrivalTime;
-@property (nonatomic, retain) NSDate * departureTime;
-@property (nonatomic, retain) Trip *myTrip;
-@property (nonatomic, retain) Stop *myStop;
-@property (nonatomic, retain) Zone *myZone;
+@property (nonatomic, strong) NSDate * arrivalTime;
+@property (nonatomic, strong) NSDate * departureTime;
+@property (nonatomic, strong) NSString *myTripID;
+@property (nonatomic, strong) NSString *myStopID;
+@property (nonatomic, strong) NSString *myZoneID;
 
 @end

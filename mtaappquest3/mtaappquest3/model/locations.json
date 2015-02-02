@@ -1,367 +1,420 @@
 {
-	"mezzanine_1": {
-		"name": "Mezzanine West",
-		"descriptionPrimary": "4,5,6 trains one level down. 7 train two levels down. Shuttle to Times Square on this level through westward passageway.",
-		"descriptionDetailed": "",
-		"signs": [{
+    "mezzanine_1": {
+		"name": "Mezzanine West.  Mezzanine West. Access to 4,5,6, trains one level down, 7 train two levels down, Shuttle Train to Times Square on this level through westward passageway",
+        "descriptionPrimary": "",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Exit to Grand Central Ternminal and 42nd street"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Stairs to 7 trains and to downton 4,5,6 trains"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Mezzanine East with elevators to 4,5,6,7 trains, additional stairs to 4,5,6,7 trains, exit to Lexington Avenue and 42nd street"
+                },
+                {
+                "name":"West",
+                "direction":"To your west",
+                "message":"Exit to 42nd street and Pershing Square, stairs to 7 trains and to uptown 4,5,6 trains, escalators to 7 trains, passageway to Shuttle train to Times Square"
+                }
+              ]
+    },
+    "passageway_entrance_east": {
+        "name": "Shuttle Train Passageway. East end ",
+        "descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Exit to Grand Central terminal and street level"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Stairs down to 4, 5, 6 Train"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Escalator down to 7 train"
+                },
+                {
+                "name":"West",
+                "direction":"To your west",
+                "message":"Shuttle train platform at far end of passageway"
+                }
+                  ]
+    },
+    "passageway_3": {
+        "name": "Shuttle Train Passageway",
+        "descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square",
+        "descriptionDetailed": "",
+        "signs": [{
 				  "name":"North",
-				  "direction":"n",
-				  "message":"Exit to Grand Central terminal and street level"
+				  "direction":"To your north",
+				  "message":"Unavailable"
 				  },
 				  {
 				  "name":"South",
-				  "direction":"s",
-				  "message":"Stairs down to 4, 5, 6 Train"
+				  "direction":"To your south",
+				  "message":"Unavilable"
 				  },
 				  {
 				  "name":"East",
-				  "direction":"e",
-				  "message":"Escalator down to 7 train"
+				  "direction":"To your east",
+				  "message":"Mezzanine with access to 4,5,6 and 7 trains and exits to Grand Central terminal and to street level"
 				  },
 				  {
 				  "name":"West",
-				  "direction":"w",
-				  "message":"Passageway to Shuttle to Times Square"
-				  }
-				  ]
-	},
-	"passageway_entrance_east": {
-		"name": "Shuttle Train Passageway East end ",
-		"descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
-		"descriptionDetailed": "",
-		"signs": [{
+				  "direction":"To your west",
+				  "message":"Shuttle Trains to Times Square"
+                  }
+                  ]
+    },
+    "passageway_2": {
+        "name": "Shuttle Train Passageway",
+        "descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square",
+        "descriptionDetailed": "",
+        "signs": [{
 				  "name":"North",
-				  "direction":"n",
-				  "message":"Exit to Grand Central terminal and street level"
+				  "direction":"To your north",
+				  "message":"Unavailable"
 				  },
 				  {
 				  "name":"South",
-				  "direction":"s",
-				  "message":"Stairs down to 4, 5, 6 Train"
+				  "direction":"To your south",
+				  "message":"Unavilable"
 				  },
 				  {
 				  "name":"East",
-				  "direction":"e",
-				  "message":"Escalator down to 7 train"
+				  "direction":"To your east",
+				  "message":"Mezzanine with access to 4,5,6 and 7 trains and exits to Grand Central terminal and to street level"
 				  },
 				  {
 				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform at far end of passageway"
-				  }
-				  ]
-	},
-	"passageway_entrance_west": {
-		"name": "Shuttle Train Passageway West end ",
-		"descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Exit to Grand Central terminal and street level"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Stairs down to 4, 5, 6 Train"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform at far end of passageway"
-				  }
-				  ]
-	},
-	"passageway_1": {
-		"name": "Shuttle Train Passageway 1",
-		"descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Exit to Grand Central terminal and street level"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Stairs down to 4, 5, 6 Train"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform at far end of passageway"
-				  }
-				  ]
-	},
-	"passageway_2": {
-		"name": "Shuttle Train Passageway 2",
-		"descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Exit to Grand Central terminal and street level"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Stairs down to 4, 5, 6 Train"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform at far end of passageway"
-				  }
-				  ]
-	},
-	"passageway_3": {
-		"name": "Shuttle Train Passageway",
-		"descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":""
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":""
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
-	"mezzanine_2": {
-		"name": "Mezzanine East",
-		"descriptionPrimary": "4,5,6 trains one level down. 7 train two levels down. Shuttle to Times Square on this level through westward passageway.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":""
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":""
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
+				  "direction":"To your west",
+				  "message":"Shuttle Trains to Times Square"
+                  }
+                  ]
+    },
+    "passageway_1": {
+        "name": "Passageway area near Shuttle Train platform",
+        "descriptionPrimary": "",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Unavailable"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Unavilable"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Mezzanine with access to 4,5,6 and 7 trains and exits to Grand Central terminal and to street level"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Shuttle Trains to Times Square"
+                  }
+                  ]
+    },
+    "passageway_entrance_west": {
+		"name": "Passageway entrance at Shuttle Train platforms. Shuttle Train Platforms start approx 200 feet ahead. Platform number 1 serving tracks 1 and 3 is slightly to your left at 10 o'clock.  Platform number 2 serving track 4 is slightly on your right at 1 o'clock.  There is no track 2. Next train leaves in [TrainLeaves]",
+        "descriptionPrimary": "Passageway to Mezzanine with access to trains 4,5,6 and 7 and exits to Grand Central terminal and  tostreet level",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Unavailable"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Unavailable"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Unavailable"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Unavailable"
+                  }
+                  ]
+    },
+    "shuttle_platform_3": {
+        "name": "Shuttle Train Platform area. All three tracks on this platform are Times Square bound. Caution: Trains stop before reaching end of tracks. To access 4,5,6,7 trains and Grand Central Terminal, use the East bound passageway. There are exit stairs to either side of the passageway entrance",
+        "descriptionPrimary": "",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Stairs to street level exit"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Stairs to street level exit"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Passageway to Grand Central Station and to main mezzanine serving 4,5,6,7 trains on lower levels"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Two platforms extending westward with tracks on either side. Tracks are numbered 1,2,3 counting left to right. Caution at tracks: Trains stop before reaching end of tracks"
+                  }
+                  ]
+    },
+    "shuttle_platform_2": {
+        "name": "Shuttle Platform 1 serving tracks 1 and 3",
+        "descriptionPrimary": "",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"unavailable"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"unavailable"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"unavailable"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"unavailable"
+                  }
+                  ]
+    },
+    "shuttle_platform_1": {
+        "name": "Shuttle Platform 2 serving track 4",
+        "descriptionPrimary": "",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"unavailable"                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"unavailable"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"unavailable"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"unavailable"
+                  }
+                  ]
+    },
+    "stairway_10": {
+        "name": "Stairs to street level exit",
+        "descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Another stairway to street level exit"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":""
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Passageway to Grand Central Station and to main mezzanine serving 4,5,6,7 trains on lower levels"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Two platforms extending westward with tracks on either side. Tracks are numbered 1,2,3 counting left to right. Caution at tracks: Trains stop before reaching end of tracks"
+                  }
+                  ]
+    },
+    "stairway_11": {
+        "name": "Stairs to street level exit",
+        "descriptionPrimary": "Passageway connecting main Mezzanine and the Shuttle to Times Square.",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":""
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Another stairway to street level exit"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Passageway to Grand Central Station and to main mezzanine serving 4,5,6,7 trains on lower levels"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Two platforms extending westward with tracks on either side. Tracks are numbered 1,2,3 counting left to right. Caution at tracks: Trains stop before reaching end of tracks"
+                  }
+                  ]
+    },
+    "escalator_train7": {
+        "name": "Escalator down to 7 train",
+        "descriptionPrimary": "Direct access to 7 train platform, which is two levels below",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":"Exit to Grand Central terminal and street level"
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":"Stairs down to 4,5,6 trains"
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":"Not sure what's over there"
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Passageway to Shuttle train"
+                  }
+                  ]
+    },
+    "elevator_1": {
+        "name": "Elevator down to 4,5,6 or 7 trains",
+        "descriptionPrimary": "4,5,6 trains are one level below. 7 train is two levels below.",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":""
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":""
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":""
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Stairs to 4,5,6 trains, escalator to 7 train. Passageway to Shuttle train"
+                  }
+                  ]
+    },
+    "elevator_2": {
+        "name": "Elevator down to 4,5,6 or 7 trains",
+        "descriptionPrimary": "4,5,6 trains are one level below. 7 train is two levels below.",
+        "descriptionDetailed": "",
+        "signs": [{
+                  "name":"North",
+                  "direction":"To your north",
+                  "message":""
+                  },
+                  {
+                  "name":"South",
+                  "direction":"To your south",
+                  "message":""
+                  },
+                  {
+                  "name":"East",
+                  "direction":"To your east",
+                  "message":""
+                  },
+                  {
+                  "name":"West",
+                  "direction":"To your west",
+                  "message":"Stairs to 4,5,6 trains, escalator to 7 train. Passageway to Shuttle train"
+                  }
+                  ]
+
+    },
 	"stairs3": {
-		"name": "4,5,6 Uptown stairwell",
-		"descriptionPrimary": "4,5,6 Uptown trains one level down.",
+		"name": "Stairs to uptown 4,5,6 trains and further down to 7 trains",
+		"descriptionPrimary": "",
 		"descriptionDetailed": "",
 		"signs": [{
 				  "name":"North",
-				  "direction":"n",
-				  "message":""
+				  "direction":"To your north",
+				  "message":"Stairs to downtown 4,5,6 trains and 7 trains, escalators to 7 trains and exit to Grand Central terminal"
 				  },
 				  {
 				  "name":"South",
-				  "direction":"s",
-				  "message":""
+				  "direction":"To your south",
+				  "message":"unavailable"
 				  },
 				  {
 				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
+				  "direction":"To your east",
+				  "message":"Mezzanine East with elevators to 4,5,6 and 7 trains, additional stairs to 4,5,6, and 7 trains, and passageway to Lexington avenue exit"
 				  },
 				  {
 				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
+				  "direction":"To your west",
+				  "message":"Exit to 42nd STreet and Pershing Square"
 				  }
 				  ]
 	},
 	"stairs2": {
-		"name": "Downtown 4,5,6 stairwell",
-		"descriptionPrimary": "4,5,6 trains one level down.",
+		"name": "Stairs to downtown 4,5,6 trains and further down to 7 trains",
+		"descriptionPrimary": "",
 		"descriptionDetailed": "",
 		"signs": [{
 				  "name":"North",
-				  "direction":"n",
+				  "direction":"To your north",
 				  "message":""
 				  },
 				  {
 				  "name":"South",
-				  "direction":"s",
+				  "direction":"To your south",
 				  "message":""
 				  },
 				  {
 				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
-	"beacon_escalator_train7": {
-		"name": "7 Train escalator",
-		"descriptionPrimary": "7 train escalator to platform.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
+				  "direction":"To your east",
 				  "message":""
 				  },
 				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":""
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
-				  },
-				  {
 				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
+				  "direction":"To your west",
+				  "message":"Stairs to 4,5,6 trains, escalator to 7 train. Passageway to Shuttle train"
 				  }
 				  ]
-	},
-	"beacon_stairway11": {
-		"name": "Stairway to MetroNorth trains",
-		"descriptionPrimary": "Stairway to MetroNorth trains.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":""
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":""
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Main mezzanine with access to 4,5,6,7 trains and exit to Grand Central terminal"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
-	"shuttle_platform_1": {
-		"name": "Shuttle train platform 1",
-		"descriptionPrimary": "Shuttle train platform 1.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Track 3"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Track 2"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
-	"shuttle_platform_2": {
-		"name": "Shuttle train platform 2",
-		"descriptionPrimary": "Shuttle train platform 2.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Track 2"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Track 1"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
-	},
-	"shuttle_platform_3": {
-		"name": "Shuttle train platform 3",
-		"descriptionPrimary": "Shuttle train entrance. Track 1 and 2 on Platform to your left.  Track 3 on platform to your right.",
-		"descriptionDetailed": "",
-		"signs": [{
-				  "name":"North",
-				  "direction":"n",
-				  "message":"Track 2"
-				  },
-				  {
-				  "name":"South",
-				  "direction":"s",
-				  "message":"Track 1"
-				  },
-				  {
-				  "name":"East",
-				  "direction":"e",
-				  "message":"Passageway to mezzanine"
-				  },
-				  {
-				  "name":"West",
-				  "direction":"w",
-				  "message":"Shuttle train platform"
-				  }
-				  ]
+		
 	}
-	
+
 }

@@ -30,7 +30,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-1B-hMe" userLabel="Label - Your Sign">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-1B-hMe" userLabel="Label - Your Sign">
                                             <rect key="frame" x="8" y="31" width="304" height="70"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -44,6 +44,7 @@
                                         <constraint firstAttribute="centerX" secondItem="DPx-1B-hMe" secondAttribute="centerX" id="OGm-sD-Gew"/>
                                         <constraint firstItem="5Kf-eP-Z0b" firstAttribute="top" secondItem="Vby-Mn-q4w" secondAttribute="topMargin" constant="2" id="S0F-g5-QEJ"/>
                                         <constraint firstItem="DPx-1B-hMe" firstAttribute="leading" secondItem="Vby-Mn-q4w" secondAttribute="leadingMargin" id="XZW-Eg-m3R"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DPx-1B-hMe" secondAttribute="bottom" constant="-9.5" id="Xp1-m4-8XS"/>
                                         <constraint firstAttribute="centerX" secondItem="5Kf-eP-Z0b" secondAttribute="centerX" constant="-0.5" id="kp3-in-jbV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -53,22 +54,25 @@
                                     <outlet property="titleLabel" destination="5Kf-eP-Z0b" id="VCu-oj-X49"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationSignCellIdentifier" rowHeight="90" id="OWF-6H-Clf" customClass="LocationSignTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationSignCellIdentifier" rowHeight="90" id="OWF-6H-Clf" customClass="LocationSignTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OWF-6H-Clf" id="xGf-eA-So1">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign info will go here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-Wh-DEM" userLabel="Label - Sign info will go here">
-                                            <rect key="frame" x="8" y="0.0" width="304" height="90"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign info will go here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-Wh-DEM" userLabel="Label - Sign info will go here">
+                                            <rect key="frame" x="14" y="0.0" width="292" height="90"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="leading" secondItem="xGf-eA-So1" secondAttribute="leadingMargin" id="5fT-Wx-5YY"/>
-                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="trailing" secondItem="xGf-eA-So1" secondAttribute="trailingMargin" id="eFY-57-6KA"/>
+                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="leading" secondItem="xGf-eA-So1" secondAttribute="leadingMargin" constant="6" id="5fT-Wx-5YY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wty-Wh-DEM" secondAttribute="bottom" constant="-8.5" id="JNN-GF-gS2"/>
+                                        <constraint firstAttribute="centerX" secondItem="Wty-Wh-DEM" secondAttribute="centerX" id="LEV-jI-Ncb"/>
+                                        <constraint firstAttribute="centerY" secondItem="Wty-Wh-DEM" secondAttribute="centerY" constant="-0.25" id="UIM-4Q-Xwz"/>
+                                        <constraint firstItem="Wty-Wh-DEM" firstAttribute="trailing" secondItem="xGf-eA-So1" secondAttribute="trailingMargin" constant="-6" id="eFY-57-6KA"/>
                                         <constraint firstItem="Wty-Wh-DEM" firstAttribute="top" secondItem="xGf-eA-So1" secondAttribute="topMargin" constant="-8" id="g6W-0L-bSJ"/>
                                     </constraints>
                                 </tableViewCellContentView>

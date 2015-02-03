@@ -54,6 +54,8 @@
 		324548701A7D895500A7447D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486D1A7D895500A7447D /* Location.m */; };
 		324548711A7D895500A7447D /* Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486F1A7D895500A7447D /* Sign.m */; };
 		324548731A7D8F7C00A7447D /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 324548721A7D8F7C00A7447D /* locations.json */; };
+		AECE54131A81209800B0EB1E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AECE54121A81209800B0EB1E /* libsqlite3.dylib */; };
+		AECE54141A81211B00B0EB1E /* mta-subway.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 23D876171A80B9130089C8E8 /* mta-subway.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,7 @@
 		3245486E1A7D895500A7447D /* Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
 		3245486F1A7D895500A7447D /* Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sign.m; sourceTree = "<group>"; };
 		324548721A7D8F7C00A7447D /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		AECE54121A81209800B0EB1E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECE54131A81209800B0EB1E /* libsqlite3.dylib in Frameworks */,
 				088F460F1A793CE4000CAB07 /* CoreText.framework in Frameworks */,
 				088F460D1A793CDD000CAB07 /* CoreData.framework in Frameworks */,
 				082767981A6966A3004BB132 /* CoreMotion.framework in Frameworks */,
@@ -240,6 +244,7 @@
 		082767991A6966BD004BB132 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AECE54121A81209800B0EB1E /* libsqlite3.dylib */,
 				088F460E1A793CE4000CAB07 /* CoreText.framework */,
 				088F460C1A793CDD000CAB07 /* CoreData.framework */,
 				0827679A1A6966D2004BB132 /* IndoorGuide.framework */,
@@ -500,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECE54141A81211B00B0EB1E /* mta-subway.sqlite in Resources */,
 				088F45AB1A793BDD000CAB07 /* routes.txt in Resources */,
 				088F46251A797E48000CAB07 /* trips.txt in Resources */,
 				08B74E9C1A7FA152007EEC27 /* Montserrat-Hairline.otf in Resources */,

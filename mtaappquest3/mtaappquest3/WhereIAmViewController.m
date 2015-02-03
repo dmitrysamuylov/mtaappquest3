@@ -12,6 +12,7 @@
 #import "CurrentSignTableViewCell.h"
 #import "SignParser.h"
 #import "LocationSignTableViewCell.h"
+#import "MTASubwayScheduleDBManager.h"
 
 static const NSTimeInterval kZoneUpdateInterval = 2;
 static NSString *const kSpecialZoneName = @"shuttle_platform_3";
@@ -31,7 +32,8 @@ static NSString *const kSpecialZoneName = @"shuttle_platform_3";
 
 @implementation WhereIAmViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
@@ -191,6 +193,13 @@ static NSString *const kSpecialZoneName = @"shuttle_platform_3";
 					NSRange endRange = [_currentLocation.name rangeOfString:@"}exist{"];
 					NSRange messageRange = NSMakeRange(startRange.length, endRange.location - startRange.length);
 					name = [_currentLocation.name substringWithRange:messageRange];
+					
+					NSInteger remainingMin = [[MTASubwayScheduleDBManager defaultManager] nextSTrainLeave];
+					
+					if (remainingMin >= 0)
+					{
+						name = [name stringByReplacingOccurrencesOfString:@"[TrainLeaves]" withString:[NSString stringWithFormat:@"%li minutes", (long)remainingMin]];
+					}
 				}
 				else // coming from station
 				{

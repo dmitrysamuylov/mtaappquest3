@@ -21,7 +21,6 @@
     [guide setNDDPath:[[NSBundle mainBundle] pathForResource:@"gcs-zones" ofType:@"ndd"]];
     guide.directionsDelegate = self;
     guide.positioningDelegate = self;
-    guide.useCompass = NO;
     
     //When in Grand Central
     [guide startUpdates];

@@ -14,7 +14,8 @@
 #import "LocationSignTableViewCell.h"
 
 static const NSTimeInterval kZoneUpdateInterval = 2;
-static NSString *const kSpecialZoneName = @"passageway_entrance_west";
+static NSString *const kSpecialZoneName = @"shuttle_platform_3";
+//static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 
 @interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate, IGPositioningDelegate, IGDirectionsDelegate>
 {
@@ -24,6 +25,7 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 	NSString *_currentZoneName;
 	NSString *_lastZoneName;
 	NSTimeInterval _lastUpdatedZone;
+	BOOL _isComingFromPassageway;
 }
 @end
 
@@ -58,6 +60,7 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 	
 	_lastZoneName = nil;
 	
+	_isComingFromPassageway = YES;
 	[_SignTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NormalCellID"];
 }
 
@@ -81,11 +84,11 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
     
     [super guideManager:manager didEnterZone:zone_id name:name];
     
-    NSString *correctedName = [name isEqualToString:@""]?@"Unnamed":name;
+    NSString *correctedName = [name isEqualToString:@""] ? @"Unnamed" : name;
 	
 	Location *newZone = [[SignParser sharedParser] getLocationWithZoneName:correctedName];
 	NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
-	if (!newZone && currentTime - _lastUpdatedZone < kZoneUpdateInterval)
+	if (!newZone || currentTime - _lastUpdatedZone <= kZoneUpdateInterval)
 	{
 		return;
 	}
@@ -93,6 +96,12 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 	_lastUpdatedZone = currentTime;
 	_lastZoneName = _currentZoneName;
 	_currentLocation = newZone;
+	
+	if([[correctedName lowercaseString] containsString:@"passageway"])
+		_isComingFromPassageway = YES;
+	else if ([[correctedName lowercaseString] containsString:@"shuttle"] && ![correctedName isEqualToString:kSpecialZoneName])
+		_isComingFromPassageway = NO;
+		
 	[_SignTableView reloadData];
     _currentZoneName = correctedName;
 }
@@ -137,6 +146,14 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
     NSLog(@"%@",error.description);
 }
 
+- (void)guideManager:(IGGuideManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+	if (!oldLocation)
+		return;
+	
+	NSLog(@"***********Distance: %.2lf", [newLocation distanceFromLocation:oldLocation]);
+}
+
 
 #pragma UITableViewDataSource
 
@@ -167,8 +184,8 @@ static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 			
 			if ([_currentZoneName isEqualToString:kSpecialZoneName])
 			{
-				// Going toward Stations
-				if ([_lastZoneName isEqualToString:@"passageway_1"])
+				// Going toward Stations]
+				if (_isComingFromPassageway)
 				{
 					NSRange startRange = [_currentLocation.name rangeOfString:@"enter{"];
 					NSRange endRange = [_currentLocation.name rangeOfString:@"}exist{"];

@@ -50,6 +50,7 @@
 		2374C1261A7D961C002A04D7 /* CurrentSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1251A7D961C002A04D7 /* CurrentSignTableViewCell.m */; };
 		2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */; };
 		2374C12E1A7DA184002A04D7 /* RecalibrateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */; };
+		23D8761A1A80B97C0089C8E8 /* MTASubwayScheduleDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D876191A80B97C0089C8E8 /* MTASubwayScheduleDBManager.m */; };
 		324548701A7D895500A7447D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486D1A7D895500A7447D /* Location.m */; };
 		324548711A7D895500A7447D /* Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245486F1A7D895500A7447D /* Sign.m */; };
 		324548731A7D8F7C00A7447D /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 324548721A7D8F7C00A7447D /* locations.json */; };
@@ -66,7 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0827676A1A696678004BB132 /* mtaappquest3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtaappquest3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0827676A1A696678004BB132 /* Navigate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0827676E1A696678004BB132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0827676F1A696678004BB132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		082767711A696678004BB132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +134,9 @@
 		2374C1291A7D96B4002A04D7 /* LocationSignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSignTableViewCell.m; sourceTree = "<group>"; };
 		2374C12C1A7DA184002A04D7 /* RecalibrateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecalibrateTableViewCell.h; sourceTree = "<group>"; };
 		2374C12D1A7DA184002A04D7 /* RecalibrateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecalibrateTableViewCell.m; sourceTree = "<group>"; };
+		23D876171A80B9130089C8E8 /* mta-subway.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "mta-subway.sqlite"; path = "../../mta-subway.sqlite"; sourceTree = "<group>"; };
+		23D876181A80B97C0089C8E8 /* MTASubwayScheduleDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTASubwayScheduleDBManager.h; sourceTree = "<group>"; };
+		23D876191A80B97C0089C8E8 /* MTASubwayScheduleDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTASubwayScheduleDBManager.m; sourceTree = "<group>"; };
 		3245486C1A7D895500A7447D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3245486D1A7D895500A7447D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3245486E1A7D895500A7447D /* Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
@@ -176,7 +180,7 @@
 		0827676B1A696678004BB132 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0827676A1A696678004BB132 /* mtaappquest3.app */,
+				0827676A1A696678004BB132 /* Navigate.app */,
 				082767831A696678004BB132 /* mtaappquest3Tests.xctest */,
 			);
 			name = Products;
@@ -185,6 +189,7 @@
 		0827676C1A696678004BB132 /* mtaappquest3 */ = {
 			isa = PBXGroup;
 			children = (
+				23D876161A80B8F60089C8E8 /* Resources */,
 				3245486B1A7D895500A7447D /* model */,
 				088F45A41A7880EE000CAB07 /* Model */,
 				088F45961A786D3F000CAB07 /* Global */,
@@ -297,6 +302,8 @@
 				088F46101A793D10000CAB07 /* CHCSVParser */,
 				0846A1DA1A7D8BF50037F4BC /* SignParser.h */,
 				0846A1DB1A7D8BF50037F4BC /* SignParser.m */,
+				23D876181A80B97C0089C8E8 /* MTASubwayScheduleDBManager.h */,
+				23D876191A80B97C0089C8E8 /* MTASubwayScheduleDBManager.m */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -391,6 +398,14 @@
 			name = RecalibrateTableViewCell;
 			sourceTree = "<group>";
 		};
+		23D876161A80B8F60089C8E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23D876171A80B9130089C8E8 /* mta-subway.sqlite */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3245486B1A7D895500A7447D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,7 +435,7 @@
 			);
 			name = mtaappquest3;
 			productName = mtaappquest3;
-			productReference = 0827676A1A696678004BB132 /* mtaappquest3.app */;
+			productReference = 0827676A1A696678004BB132 /* Navigate.app */;
 			productType = "com.apple.product-type.application";
 		};
 		082767821A696678004BB132 /* mtaappquest3Tests */ = {
@@ -452,11 +467,11 @@
 				TargetAttributes = {
 					082767691A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = Y2X429E8XQ;
+						DevelopmentTeam = H3VJ3NCEU2;
 					};
 					082767821A696678004BB132 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = Y2X429E8XQ;
+						DevelopmentTeam = H3VJ3NCEU2;
 						TestTargetID = 082767691A696678004BB132;
 					};
 				};
@@ -534,6 +549,7 @@
 				2374C12A1A7D96B4002A04D7 /* LocationSignTableViewCell.m in Sources */,
 				082767A31A69712F004BB132 /* WhereIAmViewController.m in Sources */,
 				088F464A1A798CCC000CAB07 /* StopTime.m in Sources */,
+				23D8761A1A80B97C0089C8E8 /* MTASubwayScheduleDBManager.m in Sources */,
 				324548711A7D895500A7447D /* Sign.m in Sources */,
 				088F46471A798CCB000CAB07 /* Stop.m in Sources */,
 				088F45A31A7880CB000CAB07 /* TrainCell.m in Sources */,
@@ -662,8 +678,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -671,8 +687,8 @@
 				INFOPLIST_FILE = mtaappquest3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
+				PRODUCT_NAME = Navigate;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -680,8 +696,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Diego Cruz (9N87B94U46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Diego Cruz (9N87B94U46)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mtaappquest3",
@@ -689,8 +705,8 @@
 				INFOPLIST_FILE = mtaappquest3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7192ce94-9176-4203-9628-2cd81ccc787b";
+				PRODUCT_NAME = Navigate;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

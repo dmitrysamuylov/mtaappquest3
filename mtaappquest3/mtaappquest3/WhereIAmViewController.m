@@ -15,8 +15,8 @@
 #import "MTASubwayScheduleDBManager.h"
 
 static const NSTimeInterval kZoneUpdateInterval = 2;
-static NSString *const kSpecialZoneName = @"shuttle_platform_3";
-//static NSString *const kSpecialZoneName = @"passageway_entrance_west";
+//static NSString *const kSpecialZoneName = @"shuttle_platform_3";
+static NSString *const kSpecialZoneName = @"passageway_entrance_west";
 
 @interface WhereIAmViewController ()<UITableViewDataSource, UITableViewDelegate, IGPositioningDelegate, IGDirectionsDelegate>
 {
@@ -186,28 +186,35 @@ static NSString *const kSpecialZoneName = @"shuttle_platform_3";
 			
 			if ([_currentZoneName isEqualToString:kSpecialZoneName])
 			{
-				// Going toward Stations]
-				if (_isComingFromPassageway)
+//				// Going toward Stations]
+//				if (_isComingFromPassageway)
+//				{
+//					NSRange startRange = [_currentLocation.name rangeOfString:@"enter{"];
+//					NSRange endRange = [_currentLocation.name rangeOfString:@"}exist{"];
+//					NSRange messageRange = NSMakeRange(startRange.length, endRange.location - startRange.length);
+//					name = [_currentLocation.name substringWithRange:messageRange];
+//					
+//					NSInteger remainingMin = [[MTASubwayScheduleDBManager defaultManager] nextSTrainLeave];
+//					
+//					if (remainingMin >= 0)
+//					{
+//						name = [name stringByReplacingOccurrencesOfString:@"[TrainLeaves]" withString:[NSString stringWithFormat:@"%li minutes", (long)remainingMin]];
+//					}
+//				}
+//				else // coming from station
+//				{
+//					NSRange startRange = [_currentLocation.name rangeOfString:@"}exist{"];
+//					NSInteger startIndex = startRange.location + startRange.length;
+//					NSRange messageRange = NSMakeRange(startIndex, _currentLocation.name.length - startIndex - 1);
+//					name = [_currentLocation.name substringWithRange:messageRange];
+//				}
+				NSInteger remainingMin = [[MTASubwayScheduleDBManager defaultManager] nextSTrainLeave];
+
+				if (remainingMin >= 0)
 				{
-					NSRange startRange = [_currentLocation.name rangeOfString:@"enter{"];
-					NSRange endRange = [_currentLocation.name rangeOfString:@"}exist{"];
-					NSRange messageRange = NSMakeRange(startRange.length, endRange.location - startRange.length);
-					name = [_currentLocation.name substringWithRange:messageRange];
-					
-					NSInteger remainingMin = [[MTASubwayScheduleDBManager defaultManager] nextSTrainLeave];
-					
-					if (remainingMin >= 0)
-					{
-						name = [name stringByReplacingOccurrencesOfString:@"[TrainLeaves]" withString:[NSString stringWithFormat:@"%li minutes", (long)remainingMin]];
-					}
+					name = [_currentLocation.name stringByReplacingOccurrencesOfString:@"[TrainLeaves]" withString:[NSString stringWithFormat:@"%li minutes", (long)remainingMin]];
 				}
-				else // coming from station
-				{
-					NSRange startRange = [_currentLocation.name rangeOfString:@"}exist{"];
-					NSInteger startIndex = startRange.location + startRange.length;
-					NSRange messageRange = NSMakeRange(startIndex, _currentLocation.name.length - startIndex - 1);
-					name = [_currentLocation.name substringWithRange:messageRange];
-				}
+				
 			}
 			else
 			{
